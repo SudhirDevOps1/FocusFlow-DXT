@@ -966,6 +966,92 @@
         </div>
     </section>
 
+    <!-- Deep-Dive Application Audit & Technical Analysis Section -->
+    <section class="section-container" id="app-analysis" style="padding-top: 0;">
+        <h2 class="section-title">Technical Architecture & Analysis</h2>
+        <p class="section-subtitle">A deep breakdown of the Kotlin & Jetpack Compose modules powering FocusFlow DXT.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; text-align: left; margin-bottom: 3rem;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--glow-color); display: flex; align-items: center; gap: 10px;">
+                    <span>⚙️</span> Core Service-Driven State Machine
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                    Unlike standard countdown applications that terminate when swiped away, FocusFlow DXT is engineered around a robust <strong>Foreground Service (`TimerService.kt`)</strong>. It serves as the single source of truth for timer states, lap details, and active trackers:
+                </p>
+                <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong>Compose State Binding:</strong> Binds foreground states with Jetpack Compose views using Kotlin <code>MutableStateFlow</code>, enabling real-time UI synchronization.</li>
+                    <li><strong>Dual Interception Engine:</strong> Combines Android <code>UsageStatsManager</code> background thread loops (polled at set grace thresholds) with a fallback <code>AccessibilityService</code> listener to maximize blocking reliability.</li>
+                    <li><strong>Simulated Hardware Display Modes:</strong> The rendering architecture supports four distinct faceplate configurations: Classic Digital LCD, Analog ticking hands, Minimalist Smart Watch dashboard, and vintage Pocket Watch casing.</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--glow-color); display: flex; align-items: center; gap: 10px;">
+                    <span>🌱</span> Simulated Forest & Audio Synthesizers
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                    FocusFlow DXT merges classic timer aesthetics with gamified progression systems and custom ambient audio drivers:
+                </p>
+                <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square; display: flex; flex-direction: column; gap: 8px;">
+                    <li><strong>Sunshine Forest Plantations:</strong> Focus minutes generate Scholar Coins. Use them in the virtual Sunshine Shop to unlock custom trees (Pine, Sakura, Bonsai) or purchase special fertilizers to accelerate growth logs.</li>
+                    <li><strong>Ambient Soundscapes:</strong> Integrated media player simulates soothing environment tracks including White Noise, Ocean Waves, and Forest rustles to isolate student workspace acoustics.</li>
+                    <li><strong>Sensor Calibration:</strong> Interfaces with device ambient temperature hardware sensors (`Sensor.TYPE_AMBIENT_TEMPERATURE`) to render real room heat, with built-in digital offset sliders for calibration.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; text-align: left;">
+            
+            <!-- Privacy Section -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid var(--glow-color);">
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                    <span>🔒</span> Privacy Policy & Trust Shield
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
+                    <strong>100% Private, Local-First, and Serverless:</strong> FocusFlow DXT does not utilize telemetry tracking or cloud database networks.
+                </p>
+                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
+                    <li><strong>No External Tracking:</strong> Distraction logs, application usage times, and blacklisted app names are stored purely locally inside encrypted SharedPreferences.</li>
+                    <li><strong>Zero Telemetry:</strong> No analytics trackers (like Firebase Analytics or Flurry) are embedded, making the app immune to data leaks.</li>
+                    <li><strong>Offline Independence:</strong> The application does not require internet permissions to lock apps or calculate scholar XP levels.</li>
+                </ul>
+            </div>
+
+            <!-- Limitations Section -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid #ef4444;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                    <span>⚠️</span> Hardware Limits & OS Optimization
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
+                    Operating system sandboxing and background limitations may affect functionality on specific Android skins:
+                </p>
+                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
+                    <li><strong>OEM Sleep Policies:</strong> Strict skins (MIUI/Xiaomi, ColorOS/Oppo, OxygenOS) may terminate background services. Users must turn off battery optimizations manually.</li>
+                    <li><strong>Overlay Limitation:</strong> Extreme mode warning overlays require the "Display over other apps" system overlay permission, which must be enabled during initial startup settings.</li>
+                    <li><strong>System-Blocked Access:</strong> Certain system-secured settings, dialers, and package screens cannot be intercepted due to core Android security policies.</li>
+                </ul>
+            </div>
+
+            <!-- Pricing Section -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid #00e5ff;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                    <span>💎</span> 100% Free & Open-Source Policy
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
+                    FocusFlow DXT is free software built for students, scholars, and researchers.
+                </p>
+                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
+                    <li><strong>No Advertisements:</strong> Zero display banners, interstitial advertisements, or third-party promotional content.</li>
+                    <li><strong>No In-App Purchases:</strong> Virtual coins used for forest plantations are earned exclusively through focus time. No pay-to-win hooks.</li>
+                    <li><strong>MIT Licensed Code:</strong> The codebase is fully transparent, allowing audit verification, forks, or packaging adjustments without restrictions.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
     <!-- Interactive Focus Guard (App Blocker) Showcase -->
     <section class="section-container" id="blocker" style="padding-top: 0;">
         <h2 class="section-title">Focus Guards Simulator</h2>
