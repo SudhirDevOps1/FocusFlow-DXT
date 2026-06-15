@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow DXT — Premium Retro-Digital Study & Kitchen Timer</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover FocusFlow DXT - the premium Android study countdown & kitchen timer with interactive app blocking, gamified tracking, and custom vintage LCD themes. Download the official APK now.">
+    <meta name="keywords" content="FocusFlow, Study Timer, Kitchen Timer, Android APK, App Blocker, Pomodoro, Jetpack Compose, Retro Hardware UI">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Theme Config - Retro Green (Default) */
+            --glow-color: #33ff33;
+            --glow-shadow: rgba(51, 255, 51, 0.4);
+            --bg-dark: #0b0f0c;
+            --bg-card: rgba(18, 26, 20, 0.8);
+            --border-color: rgba(51, 255, 51, 0.25);
+            --text-primary: #f0fdf4;
+            --text-secondary: #a7f3d0;
+            --casing-bg: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            --casing-border: #4a5568;
+            --lcd-bg: #050a06;
+            --transition-speed: 0.3s;
+        }
+
+        /* Alternate Theme Classes */
+        body.theme-amber {
+            --glow-color: #ffb000;
+            --glow-shadow: rgba(255, 176, 0, 0.4);
+            --bg-dark: #0f0b00;
+            --bg-card: rgba(26, 20, 0, 0.8);
+            --border-color: rgba(255, 176, 0, 0.25);
+            --text-primary: #fffbeb;
+            --text-secondary: #fde68a;
+            --lcd-bg: #0a0700;
+        }
+
+        body.theme-cyber {
+            --glow-color: #ff007f;
+            --glow-shadow: rgba(255, 0, 127, 0.4);
+            --bg-dark: #0f000b;
+            --bg-card: rgba(26, 0, 20, 0.8);
+            --border-color: rgba(255, 0, 127, 0.25);
+            --text-primary: #fff0f6;
+            --text-secondary: #ffb3d9;
+            --lcd-bg: #0a0007;
+        }
+
+        body.theme-blue {
+            --glow-color: #00e5ff;
+            --glow-shadow: rgba(0, 229, 255, 0.4);
+            --bg-dark: #000c0f;
+            --bg-card: rgba(0, 20, 26, 0.8);
+            --border-color: rgba(0, 229, 255, 0.25);
+            --text-primary: #e0fcfd;
+            --text-secondary: #99f6e4;
+            --lcd-bg: #00080a;
+        }
+
+        body.theme-amoled {
+            --glow-color: #ffffff;
+            --glow-shadow: rgba(255, 255, 255, 0.2);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.95);
+            --border-color: rgba(255, 255, 255, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --lcd-bg: #000000;
+        }
+
+        body.theme-steel {
+            --glow-color: #607d8b;
+            --glow-shadow: rgba(96, 125, 139, 0.4);
+            --bg-dark: #12181b;
+            --bg-card: rgba(24, 32, 36, 0.8);
+            --border-color: rgba(96, 125, 139, 0.25);
+            --text-primary: #eceff1;
+            --text-secondary: #b0bec5;
+            --lcd-bg: #0c1012;
+            --casing-bg: linear-gradient(135deg, #78909c 0%, #37474f 100%);
+            --casing-border: #90a4ae;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.4) 0%, transparent 80%),
+                radial-gradient(circle at 90% 80%, var(--glow-shadow) 0%, transparent 70%);
+            background-attachment: fixed;
+        }
+
+        /* Typography & Utility classes */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-shadow);
+        }
+
+        /* Layout & Navigation */
+        header {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 15, 12, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color var(--transition-speed);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            filter: drop-shadow(0 0 8px var(--glow-color));
+            transition: filter var(--transition-speed);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--glow-color);
+            text-shadow: 0 0 8px var(--glow-shadow);
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: var(--glow-color);
+            color: var(--bg-dark);
+            box-shadow: 0 0 15px var(--glow-color);
+            text-shadow: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .btn-primary {
+            background: var(--glow-color);
+            color: var(--bg-dark);
+            font-size: 1.1rem;
+            font-weight: 800;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 0 25px var(--glow-shadow);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px var(--glow-color);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--glow-color);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+        }
+
+        /* The Live Mockup Showcase (Interactive Casing Frame) */
+        .mockup-container {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .hardware-bezel {
+            background: var(--casing-bg);
+            border: 8px solid var(--casing-border);
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.8),
+                inset 0 4px 10px rgba(255,255,255,0.1),
+                inset 0 -4px 10px rgba(0,0,0,0.6),
+                0 0 40px var(--glow-shadow);
+            transition: all var(--transition-speed);
+            position: relative;
+        }
+
+        .screws {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle at 3px 3px, #90a4ae, #37474f);
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.4);
+        }
+
+        .screw-tl { top: 15px; left: 15px; }
+        .screw-tr { top: 15px; right: 15px; }
+        .screw-bl { bottom: 15px; left: 15px; }
+        .screw-br { bottom: 15px; right: 15px; }
+
+        .hardware-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.75rem;
+        }
+
+        .brand-text {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hardware-leds {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .led {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #334155;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .led-power.active {
+            background-color: #ef4444;
+            box-shadow: 0 0 8px #ef4444;
+        }
+
+        .led-mode.active {
+            background-color: var(--glow-color);
+            box-shadow: 0 0 8px var(--glow-color);
+        }
+
+        .lcd-display {
+            background-color: var(--lcd-bg);
+            border: 4px solid #1e293b;
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 5px 15px rgba(0,0,0,0.9);
+            margin-bottom: 1.5rem;
+            transition: background-color var(--transition-speed);
+        }
+
+        .lcd-grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        .lcd-top-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--glow-color);
+            opacity: 0.85;
+            font-family: 'Share Tech Mono', monospace;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color var(--transition-speed);
+        }
+
+        .lcd-main-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 4.5rem;
+            text-align: center;
+            color: var(--glow-color);
+            letter-spacing: 2px;
+            line-height: 1;
+            margin: 1rem 0;
+            transition: color var(--transition-speed);
+            filter: drop-shadow(0 0 8px var(--glow-shadow));
+        }
+
+        .lcd-footer-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--glow-color);
+            opacity: 0.85;
+            font-family: 'Share Tech Mono', monospace;
+            text-transform: uppercase;
+            transition: color var(--transition-speed);
+        }
+
+        /* Tactile Hardware Controls */
+        .hardware-panel {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .control-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .control-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .hw-btn {
+            background: linear-gradient(180deg, #475569 0%, #1e293b 100%);
+            border: 1px solid #64748b;
+            color: #f1f5f9;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.6rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            flex: 1;
+            box-shadow: 0 3px 0 #0f172a, 0 4px 6px rgba(0,0,0,0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: transform 0.05s, box-shadow 0.05s, background 0.2s;
+            text-align: center;
+        }
+
+        .hw-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 0 0 #0f172a, 0 1px 2px rgba(0,0,0,0.4);
+        }
+
+        .hw-btn.active-preset {
+            background: var(--glow-color);
+            color: var(--bg-dark);
+            border-color: var(--glow-color);
+            box-shadow: 0 3px 0 rgba(0,0,0,0.5), 0 0 10px var(--glow-shadow);
+        }
+
+        .hw-btn.hw-btn-action {
+            background: linear-gradient(180deg, #ef4444 0%, #991b1b 100%);
+            border-color: #f87171;
+            font-size: 0.85rem;
+        }
+
+        .hw-btn.hw-btn-action.start-btn {
+            background: linear-gradient(180deg, #22c55e 0%, #166534 100%);
+            border-color: #4ade80;
+        }
+
+        /* Theme Configurator UI on Web */
+        .theme-selector-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-top: 2rem;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all var(--transition-speed);
+        }
+
+        .theme-selectors {
+            display: flex;
+            gap: 12px;
+        }
+
+        .theme-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s, transform 0.2s;
+            position: relative;
+        }
+
+        .theme-dot:hover {
+            transform: scale(1.15);
+        }
+
+        .theme-dot.active {
+            border-color: #ffffff;
+            box-shadow: 0 0 12px var(--dot-glow);
+        }
+
+        .theme-dot[data-theme="green"] { background-color: #33ff33; --dot-glow: #33ff33; }
+        .theme-dot[data-theme="amber"] { background-color: #ffb000; --dot-glow: #ffb000; }
+        .theme-dot[data-theme="cyber"] { background-color: #ff007f; --dot-glow: #ff007f; }
+        .theme-dot[data-theme="blue"] { background-color: #00e5ff; --dot-glow: #00e5ff; }
+        .theme-dot[data-theme="amoled"] { background-color: #ffffff; --dot-glow: #ffffff; }
+        .theme-dot[data-theme="steel"] { background-color: #607d8b; --dot-glow: #607d8b; }
+
+        /* Feature Section */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all var(--transition-speed), transform 0.3s;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px var(--glow-shadow);
+            border-color: var(--glow-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--glow-color);
+            transition: color var(--transition-speed);
+        }
+
+        .feature-card h3 {
+            font-size: 1.35rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Interactive Focus Guard Simulator */
+        .interactive-blocker {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 4rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        @media (max-width: 768px) {
+            .interactive-blocker {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1.5rem;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .blocker-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .guard-btn {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .guard-btn:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--glow-color);
+        }
+
+        .guard-btn.active {
+            background: var(--bg-dark);
+            border-color: var(--glow-color);
+            box-shadow: 0 0 15px var(--glow-shadow);
+        }
+
+        .guard-badge {
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .guard-badge.gentle { background-color: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .guard-badge.moderate { background-color: rgba(249, 115, 22, 0.2); color: #f97316; }
+        .guard-badge.extreme { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; }
+
+        .blocker-status {
+            background: #000000;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid #1e293b;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-alert {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* Leveling/XP Simulator */
+        .gamification-showcase {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            transition: all var(--transition-speed);
+        }
+
+        .xp-bar-container {
+            width: 100%;
+            max-width: 600px;
+            height: 16px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin: 2rem auto;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .xp-bar-fill {
+            width: 65%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--glow-color), #22c55e);
+            transition: width 0.5s ease-out;
+            box-shadow: 0 0 10px var(--glow-shadow);
+        }
+
+        .xp-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+            border-top: 1px solid var(--border-color);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .download-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px var(--glow-shadow);
+            position: relative;
+            backdrop-filter: blur(20px);
+            transition: all var(--transition-speed);
+        }
+
+        .download-badge {
+            background: #ef4444;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .guide-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .step-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+
+        .step-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--glow-color);
+            margin-bottom: 0.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            transition: color var(--transition-speed);
+        }
+
+        .step-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: #050706;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--glow-color);
+        }
+
+    </style>
+</head>
+<body class="theme-green">
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="app/src/main/res/drawable/focus_flow_logo.png" alt="FocusFlow DXT" onerror="this.onerror=null; this.src='https://img.icons8.com/isometric/120/timer.png';">
+            <div>
+                <h1 class="logo-text">FocusFlow <span class="glow-text">DXT</span></h1>
+                <div class="logo-subtitle">Digital Study Labs Timer</div>
+            </div>
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#simulator">Simulator</a>
+            <a href="#blocker">Focus Guards</a>
+            <a href="#download" class="nav-btn">Download APK</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="glow-text">●</span> Offline-first Android Timer
+        </div>
+        <h2 class="hero-title">Vintage Hardware Aesthetics.<br>Intelligent <span class="glow-text">Focus Protection</span>.</h2>
+        <p class="hero-desc">An all-in-one productivity engine featuring high-contrast simulated LCD screens, responsive study blocks, precise kitchen alerts, and active package interception.</p>
+        
+        <div class="hero-cta-group">
+            <a href="./apk/FocusFlow-DXT.apk" class="btn-primary" download="FocusFlow-DXT.apk">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download APK
+            </a>
+            <a href="#simulator" class="btn-secondary">
+                Try Simulator
+            </a>
+        </div>
+
+        <!-- The Interactive Emulator/Mockup -->
+        <div class="mockup-container" id="simulator">
+            <div class="hardware-bezel">
+                <div class="screws screw-tl"></div>
+                <div class="screws screw-tr"></div>
+                <div class="screws screw-bl"></div>
+                <div class="screws screw-br"></div>
+                
+                <div class="hardware-header">
+                    <span class="brand-text">FocusFlow DXT-2500</span>
+                    <div class="hardware-leds">
+                        <div class="led led-power active" title="System Powered"></div>
+                        <div class="led led-mode" id="status-led" title="Timer Active"></div>
+                    </div>
+                </div>
+
+                <!-- LCD Display Panel -->
+                <div class="lcd-display">
+                    <div class="lcd-grid-overlay"></div>
+                    <div class="lcd-top-info">
+                        <span id="lcd-mode-title">STUDY CLOCK</span>
+                        <span id="lcd-xp-tracker">LVL 4: SCHOLAR</span>
+                    </div>
+                    <div class="lcd-main-time" id="lcd-main-time">11:56:00</div>
+                    <div class="lcd-footer-info">
+                        <span>STREAK: 12 DAYS</span>
+                        <span id="lcd-temp-display">TEMP: 26.5°C</span>
+                    </div>
+                </div>
+
+                <!-- Hardware Push Buttons -->
+                <div class="hardware-panel">
+                    <div class="control-row">
+                        <button class="hw-btn active-preset" onclick="selectPreset('clock', 'CLOCK MODE', 0)">Live Clock</button>
+                        <button class="hw-btn" onclick="selectPreset('pomo', 'POMODORO STUDY', 1500)">🍅 Pomodoro</button>
+                        <button class="hw-btn" onclick="selectPreset('sprint', 'QUICK SPRINT', 900)">⚡ Sprint</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="hw-btn" onclick="selectPreset('intense', 'DEEP SCHOLAR', 3000)">📚 Intense</button>
+                        <button class="hw-btn" onclick="selectPreset('boil', 'BOILING PRESET', 300)">🔥 Boil</button>
+                        <button class="hw-btn" onclick="selectPreset('maggi', 'COOKING DXT', 120)">🍜 Maggi</button>
+                    </div>
+                    <div class="control-row" style="margin-top: 15px;">
+                        <button class="hw-btn hw-btn-action start-btn" id="sim-start" onclick="toggleTimer()">START</button>
+                        <button class="hw-btn hw-btn-action" onclick="resetTimer()">RESET</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Theme Configurator -->
+            <div class="theme-selector-card">
+                <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Simulate Display Colors</span>
+                <div class="theme-selectors">
+                    <div class="theme-dot active" data-theme="green" onclick="changeTheme('green', this)" title="Retro Green"></div>
+                    <div class="theme-dot" data-theme="amber" onclick="changeTheme('amber', this)" title="Amber Glow"></div>
+                    <div class="theme-dot" data-theme="cyber" onclick="changeTheme('cyber', this)" title="Cyber Punk"></div>
+                    <div class="theme-dot" data-theme="blue" onclick="changeTheme('blue', this)" title="Neon Blue"></div>
+                    <div class="theme-dot" data-theme="amoled" onclick="changeTheme('amoled', this)" title="AMOLED Dark"></div>
+                    <div class="theme-dot" data-theme="steel" onclick="changeTheme('steel', this)" title="Brushed Steel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-container" id="features">
+        <h2 class="section-title">Engineered For Deep Work</h2>
+        <p class="section-subtitle">A closer look at how FocusFlow DXT helps you block distractions, level up your learning, and control your time.</p>
+        
+        <div class="grid-features">
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3>Hardware Micro-Bezel Modes</h3>
+                <p>Features quick-adjust digital dial layouts with customized audio warnings, live ticking, and precision lap recorders to match your physical study workflow.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Active App Interception</h3>
+                <p>Blocks distracting social feeds and notification hubs in extreme real-time. Works offline using secure Package Manager listeners without tracking user data.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Scholastic RPG Gamification</h3>
+                <p>Gain level milestones and experience (XP) indices for every minute focused. Keep fire streaks burning to turn hard work into an engaging game.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3>Unified Database Portal</h3>
+                <p>Instantly back up your records, level history, and blocked profiles into encrypted JSON code. Easily copy to clipboard or load from another Android device.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Classroom Lecture Workspace</h3>
+                <p>Sandboxed lecture panels embedded with Wikipedia research, Khan Academy study cards, and PiP (Picture-in-Picture) overlays for seamless multitasking.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔋</div>
+                <h3>Pure AMOLED Mode</h3>
+                <p>Saves energy on screens using absolute black screens (#000000) that disable pixels, making it the perfect night companion on your study desk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Focus Guard (App Blocker) Showcase -->
+    <section class="section-container" id="blocker" style="padding-top: 0;">
+        <h2 class="section-title">Focus Guards Simulator</h2>
+        <p class="section-subtitle">Toggle smart profiles to see how FocusFlow DXT blocks distractors and prevents study procrastination.</p>
+        
+        <div class="interactive-blocker">
+            <div class="blocker-controls">
+                <button class="guard-btn active" onclick="simulateGuard('gentle', this)">
+                    <div>
+                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Gentle Mode</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Basic in-app warning reminder banner.</div>
+                    </div>
+                    <span class="guard-badge gentle">Gentle</span>
+                </button>
+                
+                <button class="guard-btn" onclick="simulateGuard('moderate', this)">
+                    <div>
+                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Moderate Mode</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Fires high priority local system notification checks.</div>
+                    </div>
+                    <span class="guard-badge moderate">Moderate</span>
+                </button>
+                
+                <button class="guard-btn" onclick="simulateGuard('extreme', this)">
+                    <div>
+                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Extreme Mode</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Plays alarm sound overlays and forces app lock until dismissed.</div>
+                    </div>
+                    <span class="guard-badge extreme">Extreme</span>
+                </button>
+            </div>
+            
+            <div class="blocker-status" id="blocker-status-box">
+                <!-- Content injected dynamically -->
+                <div id="guard-default-content">
+                    <span style="font-size: 3rem;">📱</span>
+                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Blacklisted App Accessed</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 300px; margin-top: 8px;">(Simulated App Blocker Alert trigger below)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live XP Progression Simulator -->
+    <section class="section-container" style="padding-top: 0;">
+        <h2 class="section-title">Track Your Academic Level</h2>
+        <p class="section-subtitle">Earn 1 XP per minute of focus time. Simulate how levels grow in the gamified study hub.</p>
+        
+        <div class="gamification-showcase">
+            <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;"><span id="showcase-xp">65</span> / 100 XP</h3>
+            <p style="color: var(--text-secondary);">Rank: <span class="glow-text" id="showcase-rank" style="font-weight: 800;">Beginner Scholar (LVL 1)</span></p>
+            
+            <div class="xp-bar-container">
+                <div class="xp-bar-fill" id="showcase-xp-fill"></div>
+            </div>
+
+            <div class="xp-controls">
+                <button class="btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;" onclick="addSimulatedXp(15)">+15 Mins Focus (15 XP)</button>
+                <button class="btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.95rem; border-color: rgba(239, 68, 68, 0.4);" onclick="resetSimulatedXp()">Reset XP</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Block -->
+    <section class="download-section" id="download">
+        <div class="download-card">
+            <div class="download-badge">STABLE VERSION</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Boost Your Focus?</h2>
+            <p style="color: var(--text-secondary); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.6;">Download the installation APK file below. The package contains no advertisements, runs fully offline, and is completely open source.</p>
+            
+            <a href="./apk/FocusFlow-DXT.apk" class="btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1.25rem;" download="FocusFlow-DXT.apk">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                FocusFlow-DXT.apk (v2.5.0)
+            </a>
+
+            <div class="guide-steps">
+                <div class="step-card">
+                    <div class="step-num">01.</div>
+                    <h4 style="margin-bottom: 6px;">Download</h4>
+                    <p class="step-text">Tap the download button to save FocusFlow-DXT.apk onto your Android device.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02.</div>
+                    <h4 style="margin-bottom: 6px;">Allow Sources</h4>
+                    <p class="step-text">Allow installation from "Unknown Sources" inside your phone settings if prompted.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03.</div>
+                    <h4 style="margin-bottom: 6px;">Unleash Focus</h4>
+                    <p class="step-text">Open the application, grant Usage Stats permissions, and kickstart your studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 10px;">FocusFlow DXT is an open-source tool licensed under the MIT License.</p>
+        <p>Created by <a href="https://github.com/SudhirDevOps1" target="_blank">Sudhir Singh (@SudhirDevOps1)</a></p>
+    </footer>
+
+    <!-- Interactive JS logic -->
+    <script>
+        // Theme customization logic
+        function changeTheme(themeName, element) {
+            document.body.className = '';
+            document.body.classList.add('theme-' + themeName);
+            
+            document.querySelectorAll('.theme-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Live Mockup simulator clock / timers
+        let timerInterval = null;
+        let isTimerRunning = false;
+        let currentMode = 'clock'; // clock, timer
+        let secondsLeft = 0;
+        let selectedTotalSeconds = 0;
+
+        function updateDisplay(timeString) {
+            document.getElementById('lcd-main-time').innerText = timeString;
+        }
+
+        function getClockTimeString() {
+            const now = new Date();
+            let hours = now.getHours();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            return `${String(hours).padStart(2, '0')}:${minutes}:${seconds}`;
+        }
+
+        // Simulate clock ticking by default
+        function tickClock() {
+            if (currentMode === 'clock') {
+                updateDisplay(getClockTimeString());
+                const now = new Date();
+                // Randomize simulated temp slightly
+                const baseTemp = 26.5;
+                const variance = (Math.sin(now.getSeconds() / 10) * 0.2).toFixed(1);
+                document.getElementById('lcd-temp-display').innerText = `TEMP: ${(parseFloat(baseTemp) + parseFloat(variance)).toFixed(1)}°C`;
+            }
+        }
+
+        let clockInterval = setInterval(tickClock, 1000);
+        tickClock(); // Immediate update
+
+        function selectPreset(presetType, lcdTitle, durationSeconds) {
+            // Deactivate all preset buttons
+            document.querySelectorAll('.hw-btn').forEach(btn => {
+                if (!btn.classList.contains('hw-btn-action')) {
+                    btn.classList.remove('active-preset');
+                }
+            });
+            
+            // Set active class on target button
+            event.target.classList.add('active-preset');
+            
+            document.getElementById('lcd-mode-title').innerText = lcdTitle;
+            
+            if (presetType === 'clock') {
+                currentMode = 'clock';
+                resetTimer();
+                tickClock();
+            } else {
+                currentMode = 'timer';
+                if (timerInterval) clearInterval(timerInterval);
+                isTimerRunning = false;
+                document.getElementById('sim-start').innerText = "START";
+                document.getElementById('sim-start').classList.add('start-btn');
+                document.getElementById('status-led').classList.remove('active');
+                
+                secondsLeft = durationSeconds;
+                selectedTotalSeconds = durationSeconds;
+                formatAndShowSeconds();
+            }
+        }
+
+        function formatAndShowSeconds() {
+            const h = Math.floor(secondsLeft / 3600);
+            const m = Math.floor((secondsLeft % 3600) / 60);
+            const s = secondsLeft % 60;
+            const formatted = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+            updateDisplay(formatted);
+        }
+
+        function toggleTimer() {
+            if (currentMode === 'clock') return;
+            
+            const startBtn = document.getElementById('sim-start');
+            const statusLed = document.getElementById('status-led');
+            
+            if (isTimerRunning) {
+                // Pause
+                clearInterval(timerInterval);
+                isTimerRunning = false;
+                startBtn.innerText = "START";
+                startBtn.classList.add('start-btn');
+                statusLed.classList.remove('active');
+            } else {
+                // Start
+                if (secondsLeft <= 0) return;
+                isTimerRunning = true;
+                startBtn.innerText = "PAUSE";
+                startBtn.classList.remove('start-btn');
+                statusLed.classList.add('active');
+                
+                timerInterval = setInterval(() => {
+                    secondsLeft--;
+                    if (secondsLeft <= 0) {
+                        secondsLeft = 0;
+                        clearInterval(timerInterval);
+                        isTimerRunning = false;
+                        startBtn.innerText = "START";
+                        startBtn.classList.add('start-btn');
+                        statusLed.classList.remove('active');
+                        triggerAlarmEffect();
+                    }
+                    formatAndShowSeconds();
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            isTimerRunning = false;
+            document.getElementById('sim-start').innerText = "START";
+            document.getElementById('sim-start').classList.add('start-btn');
+            document.getElementById('status-led').classList.remove('active');
+            
+            if (currentMode === 'timer') {
+                secondsLeft = selectedTotalSeconds;
+                formatAndShowSeconds();
+            } else {
+                tickClock();
+            }
+        }
+
+        function triggerAlarmEffect() {
+            let flashCount = 0;
+            const mainTime = document.getElementById('lcd-main-time');
+            
+            const flashInterval = setInterval(() => {
+                mainTime.style.visibility = mainTime.style.visibility === 'hidden' ? 'visible' : 'hidden';
+                flashCount++;
+                if (flashCount >= 10) {
+                    clearInterval(flashInterval);
+                    mainTime.style.visibility = 'visible';
+                }
+            }, 300);
+        }
+
+        // Focus Guards (App Blocker) simulator logic
+        const blockerBox = document.getElementById('blocker-status-box');
+        
+        function simulateGuard(profile, buttonElement) {
+            // Remove active classes
+            document.querySelectorAll('.guard-btn').forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+            
+            let htmlContent = '';
+            
+            if (profile === 'gentle') {
+                htmlContent = `
+                    <div style="background: rgba(234, 179, 8, 0.1); border: 2px solid #eab308; padding: 1.5rem; border-radius: 12px; max-width: 400px;">
+                        <span style="color: #eab308; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">⚠️ Gentle Alert Overlay</span>
+                        <h4 style="margin: 8px 0; font-size: 1.1rem; color: #fff;">Are you drifting, Scholar?</h4>
+                        <p style="font-size: 0.8rem; color: #cbd5e1;">"You blacklisted Instagram for this timer block. Stay focused!"</p>
+                        <div style="margin-top: 12px; display: flex; gap: 8px; justify-content: flex-end;">
+                            <button style="background: #eab308; color: #000; border: none; font-weight: 800; padding: 0.35rem 0.8rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">Acknowledge</button>
+                        </div>
+                    </div>
+                `;
+            } else if (profile === 'moderate') {
+                htmlContent = `
+                    <div style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 1rem 1.5rem; text-align: left; width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                            <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">System Notification</span>
+                            <span style="font-size: 0.7rem; color: #64748b;">now</span>
+                        </div>
+                        <h5 style="font-weight: 800; margin-bottom: 4px; color: #f1f5f9;">🎯 FocusFlow Guard Intercepted</h5>
+                        <p style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">Active drift detected: social application opened during 50m Intense block.</p>
+                    </div>
+                `;
+            } else if (profile === 'extreme') {
+                htmlContent = `
+                    <div class="status-alert" style="display: flex; background: rgba(239, 68, 68, 0.15); border: 2px solid #ef4444; padding: 2rem; border-radius: 16px; max-width: 400px;">
+                        <span style="font-size: 2.5rem; animation: rotate 1s infinite alternate;">🚨</span>
+                        <h4 style="color: #ef4444; font-size: 1.25rem;">EXTREME INTRUSION ACTION</h4>
+                        <p style="font-size: 0.85rem; color: #fecdd3; line-height: 1.5;">Distracting application has been blocked. Closing in progress. Please return to your active Study Presets panel.</p>
+                        <div style="margin-top: 10px;">
+                            <button onclick="resetSimulatorAlert()" style="background: #ef4444; color: #fff; border: none; font-weight: 800; padding: 0.5rem 1.25rem; font-size: 0.8rem; border-radius: 6px; cursor: pointer; box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);">Close Lock Screen</button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            blockerBox.innerHTML = htmlContent;
+        }
+
+        function resetSimulatorAlert() {
+            blockerBox.innerHTML = `
+                <div id="guard-default-content">
+                    <span style="font-size: 3rem;">📱</span>
+                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Blacklisted App Accessed</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 300px; margin-top: 8px;">(Simulated App Blocker Alert trigger below)</p>
+                </div>
+            `;
+            document.querySelectorAll('.guard-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.guard-btn').classList.add('active');
+        }
+
+        // Gamification Simulated XP Progress
+        let currentXp = 65;
+        let currentLvl = 1;
+        const ranks = [
+            "Beginner Scholar (LVL 1)",
+            "Active Student (LVL 2)",
+            "Time Specialist (LVL 3)",
+            "Focus Master (LVL 4)",
+            "Grandmaster Scholar (LVL 5+)"
+        ];
+
+        function addSimulatedXp(amount) {
+            currentXp += amount;
+            if (currentXp >= 100) {
+                currentXp = currentXp % 100;
+                currentLvl++;
+            }
+            
+            // Render updates
+            document.getElementById('showcase-xp').innerText = currentXp;
+            
+            let rankText = ranks[Math.min(currentLvl - 1, ranks.length - 1)];
+            if (currentLvl > 5) {
+                rankText = `Grandmaster Scholar (LVL ${currentLvl})`;
+            }
+            document.getElementById('showcase-rank').innerText = rankText;
+            
+            // Bar fill width
+            document.getElementById('showcase-xp-fill').style.width = `${currentXp}%`;
+            
+            // Update LCD header info if lvl matches mock status
+            document.getElementById('lcd-xp-tracker').innerText = `LVL ${currentLvl}: ${rankText.split(' (')[0].toUpperCase()}`;
+        }
+
+        function resetSimulatedXp() {
+            currentXp = 0;
+            currentLvl = 1;
+            document.getElementById('showcase-xp').innerText = '0';
+            document.getElementById('showcase-rank').innerText = ranks[0];
+            document.getElementById('showcase-xp-fill').style.width = '0%';
+            document.getElementById('lcd-xp-tracker').innerText = `LVL 1: BEGINNER SCHOLAR`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kitchen Timer &amp; Study Monitor</string>
+    <string name="accessibility_service_description">Tracks foreground distraction apps (Instagram Reels, Facebook, Youtube Shorts, Snapchat, etc.) instantly and reliably to keep you focused during active Pomodoro countdown and kitchen timing cycles.</string>
+</resources>
