@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Safe Area: centered clock design representing a high-tech kitchen & study companion -->
+    <group android:translateX="0" android:translateY="0">
+        <!-- Mechanical Alarm Screws/Bells at the top -->
+        <path
+            android:fillColor="#FF7A00"
+            android:pathData="M38,32 c-4,-4 -10,-2 -11,4 c-1,5 4,8 8,8 Z" />
+        <path
+            android:fillColor="#FF7A00"
+            android:pathData="M70,32 c4,-4 10,-2 11,4 c1,5 -4,8 -8,8 Z" />
+        <!-- Top metal bracket carrying latch loop -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3.5"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M44,28 A 12,12 0 0 1 64,28" />
+        <!-- Hardened External Instrument Dial Casing -->
+        <path
+            android:strokeColor="#00E676"
+            android:strokeWidth="4"
+            android:fillColor="#151D24"
+            android:pathData="M54,58 m-24,0 a24,24 0 1,1 48,0 a24,24 0 1,1 -48,0" />
+        <!-- Core illuminating segment dots in screen center -->
+        <path
+            android:fillColor="#00E5FF"
+            android:pathData="M54,42 c1,0 2,1 2,2 s-1,2 -2,2 s-2,-1 -2,-2 s1,-2 2,-2 z" />
+        <!-- Polished instrument display hands indicating speed run segments -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:pathData="M54,58 L54,48" />
+        <path
+            android:strokeColor="#FF7A00"
+            android:strokeWidth="2.5"
+            android:strokeLineCap="round"
+            android:pathData="M54,58 L66,58" />
+        <!-- Center brass/metallic spindle center circle -->
+        <path
+            android:fillColor="#FFD600"
+            android:pathData="M54,54 a4,4 0 1,0 0,8 a4,4 0 1,0 0,-8" />
+        <!-- Subtle precision graduation markings -->
+        <path
+            android:strokeColor="#00E5FF"
+            android:strokeWidth="1.5"
+            android:pathData="M37,58 L41,58 M67,58 L71,58 M54,41 L54,45 M54,71 L54,75" />
+    </group>
+</vector>

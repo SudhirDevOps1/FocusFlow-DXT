@@ -1,0 +1,6 @@
+{
+  "name": "Kitchen Timer & Study Monitor",
+  "description": "An advanced, picture-in-picture enabled physical kitchen timer, stopwatch, and smart desktop clock. Features high-precision focus monitoring, environmental temperature sensors, and multi-themed LCD screens.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
