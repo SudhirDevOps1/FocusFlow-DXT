@@ -28,9 +28,11 @@
 
 ## 📥 Quick Download & Live Web Showcase
 
-### 🌐 **Live Web Showcase**
-Explore all the interactive features and simulated LCD dashboard of FocusFlow DXT directly in your web browser:
-👉 **[Open Web Showcase (index.html)](./index.html)**
+## 🌐 Live Web Showcase
+
+Explore all the interactive features and simulated LCD dashboard of FocusFlow DXT directly in your web browser.
+
+**[Open Web Showcase](https://sudhirdevops1.github.io/FocusFlow-DXT/)**
 
 ### 📱 **Download Android App (APK)**
 Get the fully functional, working application package directly from this repository:
