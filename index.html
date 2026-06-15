@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-green">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,73 +17,81 @@
             /* Theme Config - Retro Green (Default) */
             --glow-color: #33ff33;
             --glow-shadow: rgba(51, 255, 51, 0.4);
-            --bg-dark: #0b0f0c;
-            --bg-card: rgba(18, 26, 20, 0.8);
-            --border-color: rgba(51, 255, 51, 0.25);
+            --bg-dark: #070a08;
+            --bg-card: rgba(14, 22, 17, 0.85);
+            --border-color: rgba(51, 255, 51, 0.22);
             --text-primary: #f0fdf4;
             --text-secondary: #a7f3d0;
-            --casing-bg: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-            --casing-border: #4a5568;
-            --lcd-bg: #050a06;
+            --casing-bg: linear-gradient(135deg, #2c3531 0%, #111a16 100%);
+            --casing-border: #3f4e47;
+            --lcd-bg: #030804;
             --transition-speed: 0.3s;
         }
 
-        /* Alternate Theme Classes */
-        body.theme-amber {
+        /* Global Theme Override Classes */
+        html.theme-amber {
             --glow-color: #ffb000;
-            --glow-shadow: rgba(255, 176, 0, 0.4);
-            --bg-dark: #0f0b00;
-            --bg-card: rgba(26, 20, 0, 0.8);
-            --border-color: rgba(255, 176, 0, 0.25);
+            --glow-shadow: rgba(255, 176, 0, 0.45);
+            --bg-dark: #0a0700;
+            --bg-card: rgba(22, 16, 10, 0.85);
+            --border-color: rgba(255, 176, 0, 0.22);
             --text-primary: #fffbeb;
             --text-secondary: #fde68a;
-            --lcd-bg: #0a0700;
+            --casing-bg: linear-gradient(135deg, #3d2a00 0%, #1a1000 100%);
+            --casing-border: #5a3d00;
+            --lcd-bg: #060300;
         }
 
-        body.theme-cyber {
+        html.theme-cyber {
             --glow-color: #ff007f;
-            --glow-shadow: rgba(255, 0, 127, 0.4);
-            --bg-dark: #0f000b;
-            --bg-card: rgba(26, 0, 20, 0.8);
-            --border-color: rgba(255, 0, 127, 0.25);
+            --glow-shadow: rgba(255, 0, 127, 0.45);
+            --bg-dark: #0b0008;
+            --bg-card: rgba(22, 10, 18, 0.85);
+            --border-color: rgba(255, 0, 127, 0.22);
             --text-primary: #fff0f6;
             --text-secondary: #ffb3d9;
-            --lcd-bg: #0a0007;
+            --casing-bg: linear-gradient(135deg, #440026 0%, #1a000e 100%);
+            --casing-border: #660039;
+            --lcd-bg: #080005;
         }
 
-        body.theme-blue {
+        html.theme-blue {
             --glow-color: #00e5ff;
-            --glow-shadow: rgba(0, 229, 255, 0.4);
-            --bg-dark: #000c0f;
-            --bg-card: rgba(0, 20, 26, 0.8);
-            --border-color: rgba(0, 229, 255, 0.25);
+            --glow-shadow: rgba(0, 229, 255, 0.45);
+            --bg-dark: #00090c;
+            --bg-card: rgba(10, 20, 24, 0.85);
+            --border-color: rgba(0, 229, 255, 0.22);
             --text-primary: #e0fcfd;
             --text-secondary: #99f6e4;
-            --lcd-bg: #00080a;
+            --casing-bg: linear-gradient(135deg, #00363d 0%, #00171a 100%);
+            --casing-border: #004e59;
+            --lcd-bg: #000508;
         }
 
-        body.theme-amoled {
+        html.theme-amoled {
             --glow-color: #ffffff;
-            --glow-shadow: rgba(255, 255, 255, 0.2);
-            --bg-dark: #050505;
-            --bg-card: rgba(15, 15, 15, 0.95);
+            --glow-shadow: rgba(255, 255, 255, 0.25);
+            --bg-dark: #020202;
+            --bg-card: rgba(12, 12, 12, 0.95);
             --border-color: rgba(255, 255, 255, 0.15);
             --text-primary: #ffffff;
             --text-secondary: #a3a3a3;
+            --casing-bg: linear-gradient(135deg, #222 0%, #050505 100%);
+            --casing-border: #444;
             --lcd-bg: #000000;
         }
 
-        body.theme-steel {
-            --glow-color: #607d8b;
-            --glow-shadow: rgba(96, 125, 139, 0.4);
-            --bg-dark: #12181b;
-            --bg-card: rgba(24, 32, 36, 0.8);
-            --border-color: rgba(96, 125, 139, 0.25);
+        html.theme-steel {
+            --glow-color: #90a4ae;
+            --glow-shadow: rgba(144, 164, 174, 0.4);
+            --bg-dark: #101416;
+            --bg-card: rgba(20, 26, 30, 0.85);
+            --border-color: rgba(144, 164, 174, 0.22);
             --text-primary: #eceff1;
             --text-secondary: #b0bec5;
-            --lcd-bg: #0c1012;
-            --casing-bg: linear-gradient(135deg, #78909c 0%, #37474f 100%);
-            --casing-border: #90a4ae;
+            --casing-bg: linear-gradient(135deg, #455a64 0%, #1e272c 100%);
+            --casing-border: #546e7a;
+            --lcd-bg: #0b0e10;
         }
 
         * {
@@ -103,28 +111,42 @@
                 radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.4) 0%, transparent 80%),
                 radial-gradient(circle at 90% 80%, var(--glow-shadow) 0%, transparent 70%);
             background-attachment: fixed;
+            line-height: 1.5;
         }
 
-        /* Typography & Utility classes */
-        h1, h2, h3, h4 {
+        /* Typography & Custom Classes */
+        h1, h2, h3, h4, h5, h6 {
             font-weight: 800;
             letter-spacing: -0.025em;
         }
         
         .glow-text {
+            color: var(--glow-color);
             text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-shadow);
+            transition: color var(--transition-speed), text-shadow var(--transition-speed);
         }
 
-        /* Layout & Navigation */
+        .glow-border {
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 15px rgba(0,0,0,0.4), inset 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: border-color var(--transition-speed);
+        }
+
+        .glow-border:hover {
+            border-color: var(--glow-color);
+            box-shadow: 0 0 20px var(--glow-shadow);
+        }
+
+        /* Navigation Header */
         header {
             width: 100%;
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: fixed;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             background: rgba(11, 15, 12, 0.75);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
@@ -138,21 +160,21 @@
         }
 
         .logo-img {
-            width: 42px;
-            height: 42px;
+            width: 38px;
+            height: 38px;
             filter: drop-shadow(0 0 8px var(--glow-color));
             transition: filter var(--transition-speed);
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .logo-subtitle {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-secondary);
             font-weight: 400;
             letter-spacing: 0;
@@ -168,7 +190,7 @@
             color: var(--text-primary);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.2s, text-shadow 0.2s;
         }
 
@@ -192,14 +214,14 @@
             text-shadow: none;
         }
 
-        /* Hero Section */
+        /* Hero Container */
         .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 8rem 2rem 4rem;
+            padding: 7rem 2rem 3rem;
             text-align: center;
             position: relative;
         }
@@ -209,45 +231,46 @@
             border: 1px solid var(--border-color);
             padding: 0.5rem 1.25rem;
             border-radius: 9999px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: border-color var(--transition-speed);
         }
 
         .hero-title {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            max-width: 900px;
+            font-size: 3.6rem;
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+            max-width: 950px;
         }
 
         .hero-desc {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-secondary);
-            max-width: 650px;
-            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
             line-height: 1.6;
         }
 
         .hero-cta-group {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.25rem;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
 
         .btn-primary {
             background: var(--glow-color);
             color: var(--bg-dark);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.2rem;
             border-radius: 12px;
             text-decoration: none;
             box-shadow: 0 0 25px var(--glow-shadow);
@@ -260,16 +283,16 @@
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
             box-shadow: 0 0 35px var(--glow-color);
         }
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
             color: var(--text-primary);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.2rem;
             border-radius: 12px;
             text-decoration: none;
             border: 1px solid var(--border-color);
@@ -286,93 +309,98 @@
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
         }
 
-        /* The Live Mockup Showcase (Interactive Casing Frame) */
+        /* Mockup Casing & Bezel */
         .mockup-container {
             width: 100%;
-            max-width: 720px;
+            max-width: 800px;
             margin: 0 auto;
             position: relative;
-            perspective: 1000px;
         }
 
         .hardware-bezel {
             background: var(--casing-bg);
             border: 8px solid var(--casing-border);
-            border-radius: 28px;
+            border-radius: 32px;
             padding: 2rem;
             box-shadow: 
-                0 30px 60px rgba(0,0,0,0.8),
-                inset 0 4px 10px rgba(255,255,255,0.1),
-                inset 0 -4px 10px rgba(0,0,0,0.6),
+                0 30px 60px rgba(0,0,0,0.85),
+                inset 0 4px 12px rgba(255,255,255,0.08),
+                inset 0 -4px 12px rgba(0,0,0,0.65),
                 0 0 40px var(--glow-shadow);
-            transition: all var(--transition-speed);
+            transition: background var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
             position: relative;
         }
 
-        .screws {
+        .screw {
             position: absolute;
-            width: 12px;
-            height: 12px;
-            background: radial-gradient(circle at 3px 3px, #90a4ae, #37474f);
+            width: 14px;
+            height: 14px;
+            background: radial-gradient(circle at 4px 4px, #cfd8dc, #546e7a);
             border-radius: 50%;
-            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.4);
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.6);
         }
 
-        .screw-tl { top: 15px; left: 15px; }
-        .screw-tr { top: 15px; right: 15px; }
-        .screw-bl { bottom: 15px; left: 15px; }
-        .screw-br { bottom: 15px; right: 15px; }
+        .screw-tl { top: 12px; left: 12px; }
+        .screw-tr { top: 12px; right: 12px; }
+        .screw-bl { bottom: 12px; left: 12px; }
+        .screw-br { bottom: 12px; right: 12px; }
 
         .hardware-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid rgba(255,255,255,0.05);
+            border-bottom: 2px solid rgba(255,255,255,0.06);
             padding-bottom: 0.75rem;
         }
 
         .brand-text {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 800;
-            color: #94a3b8;
+            color: var(--text-secondary);
             letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         .hardware-leds {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             align-items: center;
         }
 
         .led {
-            width: 10px;
-            height: 10px;
+            width: 11px;
+            height: 11px;
             border-radius: 50%;
-            background-color: #334155;
+            background-color: #374151;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.6);
             transition: background-color 0.2s, box-shadow 0.2s;
         }
 
         .led-power.active {
             background-color: #ef4444;
-            box-shadow: 0 0 8px #ef4444;
+            box-shadow: 0 0 8px #ef4444, inset 0 1px 1px rgba(255,255,255,0.4);
         }
 
         .led-mode.active {
             background-color: var(--glow-color);
-            box-shadow: 0 0 8px var(--glow-color);
+            box-shadow: 0 0 8px var(--glow-color), inset 0 1px 1px rgba(255,255,255,0.4);
         }
 
+        /* LCD screen overlay and faceplate rendering styles */
         .lcd-display {
             background-color: var(--lcd-bg);
-            border: 4px solid #1e293b;
-            border-radius: 12px;
+            border: 5px solid #1e293b;
+            border-radius: 16px;
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 5px 15px rgba(0,0,0,0.9);
+            box-shadow: inset 0 5px 20px rgba(0,0,0,0.95);
             margin-bottom: 1.5rem;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: background-color var(--transition-speed);
         }
 
@@ -382,54 +410,253 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
             background-size: 100% 4px, 6px 100%;
             pointer-events: none;
-            opacity: 0.4;
+            opacity: 0.35;
         }
 
-        .lcd-top-info {
+        .lcd-top-row {
             display: flex;
             justify-content: space-between;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: var(--glow-color);
             opacity: 0.85;
             font-family: 'Share Tech Mono', monospace;
-            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color var(--transition-speed);
+        }
+
+        /* Center screen rendering configurations */
+        .lcd-center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0.5rem 0;
+        }
+
+        /* Style 1: Digital LCD */
+        .lcd-digital-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 4.8rem;
+            text-align: center;
+            color: var(--glow-color);
+            letter-spacing: 2px;
+            line-height: 1;
+            transition: color var(--transition-speed);
+            filter: drop-shadow(0 0 8px var(--glow-shadow));
+        }
+
+        /* Style 2: Analog Clock (Canvas-like layout) */
+        .analog-clock-container {
+            display: none;
+            width: 130px;
+            height: 130px;
+            border: 4px solid var(--glow-color);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 15px var(--glow-shadow);
+        }
+
+        .analog-clock-face {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .analog-ticks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--glow-color);
+        }
+
+        .analog-tick-label {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .tick-12 { top: 10%; left: 50%; }
+        .tick-3  { top: 50%; left: 90%; }
+        .tick-6  { top: 90%; left: 50%; }
+        .tick-9  { top: 50%; left: 10%; }
+
+        .analog-center-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--glow-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .clock-hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            background-color: var(--glow-color);
+            border-radius: 4px;
+            transform: rotate(0deg);
+        }
+
+        .hand-hour {
+            width: 4px;
+            height: 35px;
+            margin-left: -2px;
+            z-index: 4;
+        }
+
+        .hand-minute {
+            width: 3px;
+            height: 48px;
+            margin-left: -1.5px;
+            z-index: 5;
+        }
+
+        .hand-second {
+            width: 1.5px;
+            height: 52px;
+            margin-left: -0.75px;
+            background-color: #ef4444;
+            z-index: 6;
+        }
+
+        /* Style 3: Smart Watch Dashboard */
+        .smart-watch-dashboard {
+            display: none;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--glow-color);
+        }
+
+        .smart-watch-rings {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .smart-watch-rings svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .ring-bg {
+            fill: none;
+            stroke: rgba(255,255,255,0.05);
+            stroke-width: 8;
+        }
+
+        .ring-active {
+            fill: none;
+            stroke: var(--glow-color);
+            stroke-width: 8;
+            stroke-dasharray: 251.2;
+            stroke-dashoffset: 80; /* Modulated dynamically */
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .ring-inner-active {
+            fill: none;
+            stroke: #ef4444;
+            stroke-width: 8;
+            stroke-dasharray: 201;
+            stroke-dashoffset: 100;
+            stroke-linecap: round;
+        }
+
+        .smart-watch-time-small {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .smart-watch-stats {
+            text-align: left;
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .heart-pulse {
+            display: inline-block;
+            color: #ef4444;
+            animation: pulse-beat 1s infinite alternate;
+        }
+
+        @keyframes pulse-beat {
+            to { transform: scale(1.2); }
+        }
+
+        /* Style 4: Pocket Watch Face */
+        .pocket-watch-bezel {
+            display: none;
+            width: 145px;
+            height: 145px;
+            border: 6px double #d4af37;
+            border-radius: 50%;
+            position: relative;
+            background: radial-gradient(circle, #0e120f 0%, #030804 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .pocket-watch-loop {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 4px solid #d4af37;
+            border-radius: 50%;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .pocket-roman-ticks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--glow-color);
+        }
+        .roman-12 { top: 6%; left: 50%; transform: translateX(-50%); }
+        .roman-3  { top: 50%; right: 6%; transform: translateY(-50%); }
+        .roman-6  { bottom: 6%; left: 50%; transform: translateX(-50%); }
+        .roman-9  { top: 50%; left: 6%; transform: translateY(-50%); }
+
+        .lcd-bottom-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--glow-color);
+            opacity: 0.85;
+            font-family: 'Share Tech Mono', monospace;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color var(--transition-speed);
         }
 
-        .lcd-main-time {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 4.5rem;
-            text-align: center;
-            color: var(--glow-color);
-            letter-spacing: 2px;
-            line-height: 1;
-            margin: 1rem 0;
-            transition: color var(--transition-speed);
-            filter: drop-shadow(0 0 8px var(--glow-shadow));
-        }
-
-        .lcd-footer-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--glow-color);
-            opacity: 0.85;
-            font-family: 'Share Tech Mono', monospace;
-            text-transform: uppercase;
-            transition: color var(--transition-speed);
-        }
-
-        /* Tactile Hardware Controls */
+        /* Hardware Panel controls buttons */
         .hardware-panel {
-            background: rgba(0,0,0,0.2);
-            border-radius: 12px;
-            padding: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.25);
+            border-radius: 16px;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.04);
         }
 
         .control-row {
@@ -450,11 +677,11 @@
             font-family: 'Outfit', sans-serif;
             font-size: 0.75rem;
             font-weight: 800;
-            padding: 0.6rem 0.5rem;
-            border-radius: 6px;
+            padding: 0.7rem 0.5rem;
+            border-radius: 8px;
             cursor: pointer;
             flex: 1;
-            box-shadow: 0 3px 0 #0f172a, 0 4px 6px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 0 #0f172a, 0 4px 6px rgba(0,0,0,0.5);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: transform 0.05s, box-shadow 0.05s, background 0.2s;
@@ -463,36 +690,89 @@
 
         .hw-btn:active {
             transform: translateY(3px);
-            box-shadow: 0 0 0 #0f172a, 0 1px 2px rgba(0,0,0,0.4);
+            box-shadow: 0 1px 0 #0f172a, 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .hw-btn.active-preset {
             background: var(--glow-color);
             color: var(--bg-dark);
             border-color: var(--glow-color);
-            box-shadow: 0 3px 0 rgba(0,0,0,0.5), 0 0 10px var(--glow-shadow);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.4), 0 0 12px var(--glow-shadow);
+            text-shadow: none;
         }
 
         .hw-btn.hw-btn-action {
-            background: linear-gradient(180deg, #ef4444 0%, #991b1b 100%);
+            background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
             border-color: #f87171;
             font-size: 0.85rem;
+            color: #ffffff;
         }
 
         .hw-btn.hw-btn-action.start-btn {
-            background: linear-gradient(180deg, #22c55e 0%, #166534 100%);
+            background: linear-gradient(180deg, #22c55e 0%, #15803d 100%);
             border-color: #4ade80;
         }
 
-        /* Theme Configurator UI on Web */
+        /* Simulated Ambient Soundscapes Controls */
+        .soundscapes-panel {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.04);
+            padding: 0.8rem;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .soundscapes-title {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .sound-btn {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .sound-btn:hover {
+            border-color: var(--glow-color);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .sound-btn.active {
+            background: var(--glow-color);
+            color: var(--bg-dark);
+            border-color: var(--glow-color);
+            box-shadow: 0 0 8px var(--glow-shadow);
+        }
+
+        /* Theme Configurator UI */
         .theme-selector-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             backdrop-filter: blur(12px);
             border-radius: 16px;
             padding: 1.25rem;
-            margin-top: 2rem;
-            display: inline-flex;
+            margin-top: 1.5rem;
+            display: flex;
             flex-direction: column;
             align-items: center;
             gap: 12px;
@@ -502,16 +782,16 @@
 
         .theme-selectors {
             display: flex;
-            gap: 12px;
+            gap: 14px;
         }
 
         .theme-dot {
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             cursor: pointer;
             border: 2px solid transparent;
-            transition: border-color 0.2s, transform 0.2s;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
             position: relative;
         }
 
@@ -521,7 +801,7 @@
 
         .theme-dot.active {
             border-color: #ffffff;
-            box-shadow: 0 0 12px var(--dot-glow);
+            box-shadow: 0 0 14px var(--dot-glow);
         }
 
         .theme-dot[data-theme="green"] { background-color: #33ff33; --dot-glow: #33ff33; }
@@ -529,27 +809,27 @@
         .theme-dot[data-theme="cyber"] { background-color: #ff007f; --dot-glow: #ff007f; }
         .theme-dot[data-theme="blue"] { background-color: #00e5ff; --dot-glow: #00e5ff; }
         .theme-dot[data-theme="amoled"] { background-color: #ffffff; --dot-glow: #ffffff; }
-        .theme-dot[data-theme="steel"] { background-color: #607d8b; --dot-glow: #607d8b; }
+        .theme-dot[data-theme="steel"] { background-color: #90a4ae; --dot-glow: #90a4ae; }
 
-        /* Feature Section */
+        /* General layout grid systems */
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .section-subtitle {
             font-size: 1.1rem;
             color: var(--text-secondary);
             text-align: center;
-            margin-bottom: 4rem;
-            max-width: 600px;
+            margin-bottom: 3.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -564,30 +844,30 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2.2rem;
             transition: all var(--transition-speed), transform 0.3s;
             backdrop-filter: blur(12px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            text-align: left;
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 15px 35px var(--glow-shadow);
             border-color: var(--glow-color);
         }
 
         .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.3rem;
             color: var(--glow-color);
             transition: color var(--transition-speed);
         }
 
         .feature-card h3 {
-            font-size: 1.35rem;
+            font-size: 1.3rem;
         }
 
         .feature-card p {
@@ -596,217 +876,657 @@
             line-height: 1.6;
         }
 
-        /* Interactive Focus Guard Simulator */
-        .interactive-blocker {
+        /* Focus Guards Simulator */
+        .focus-guards-hub {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 3rem;
-            margin-top: 4rem;
+            padding: 2.5rem;
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2.5rem;
             align-items: center;
             backdrop-filter: blur(12px);
             transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
         }
 
         @media (max-width: 768px) {
-            .interactive-blocker {
+            .focus-guards-hub {
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 padding: 1.5rem;
             }
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
         }
 
-        .blocker-controls {
+        .guards-checklist {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 14px;
+            text-align: left;
         }
 
-        .guard-btn {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            text-align: left;
-            cursor: pointer;
-            transition: all 0.2s;
+        .checklist-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.2s;
         }
 
-        .guard-btn:hover {
-            background: rgba(255,255,255,0.06);
+        .checklist-item:hover {
             border-color: var(--glow-color);
+            background: rgba(255,255,255,0.04);
         }
 
-        .guard-btn.active {
-            background: var(--bg-dark);
+        .checklist-item.active {
             border-color: var(--glow-color);
-            box-shadow: 0 0 15px var(--glow-shadow);
+            background: rgba(51, 255, 51, 0.03);
         }
 
-        .guard-badge {
-            font-size: 0.75rem;
-            font-weight: 800;
-            padding: 0.25rem 0.6rem;
+        .custom-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--glow-color);
             border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--glow-color);
+            font-weight: bold;
+        }
+
+        .level-triggers {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .trigger-btn {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: rgba(255,255,255,0.03);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
             text-transform: uppercase;
         }
 
-        .guard-badge.gentle { background-color: rgba(234, 179, 8, 0.2); color: #eab308; }
-        .guard-badge.moderate { background-color: rgba(249, 115, 22, 0.2); color: #f97316; }
-        .guard-badge.extreme { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .trigger-btn:hover {
+            border-color: var(--glow-color);
+        }
 
-        .blocker-status {
-            background: #000000;
-            border-radius: 16px;
-            padding: 2rem;
+        .trigger-btn.active-gentle { background-color: rgba(234,179,8,0.15); border-color: #eab308; color: #fde047; }
+        .trigger-btn.active-moderate { background-color: rgba(249,115,22,0.15); border-color: #f97316; color: #fed7aa; }
+        .trigger-btn.active-extreme { background-color: rgba(239,68,68,0.15); border-color: #ef4444; color: #fca5a5; }
+
+        .guard-preview-window {
+            background: #020403;
             border: 2px solid #1e293b;
-            min-height: 250px;
+            border-radius: 16px;
+            min-height: 260px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 1.5rem;
             position: relative;
             overflow: hidden;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
         }
 
-        .status-alert {
-            display: none;
+        /* Gentle overlay simulator styles */
+        .sim-overlay-gentle {
+            background: rgba(234,179,8,0.06);
+            border: 2px dashed #eab308;
+            border-radius: 12px;
+            padding: 1.2rem;
+            width: 100%;
+            text-align: left;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        /* Moderate overlay simulator styles */
+        .sim-overlay-moderate {
+            background: #1e293b;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: left;
+            width: 100%;
+            max-width: 280px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+            animation: popIn 0.3s ease-out;
+        }
+
+        /* Extreme overlay simulator styles */
+        .sim-overlay-extreme {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(239, 68, 68, 0.95);
+            color: #ffffff;
+            display: flex;
             flex-direction: column;
-            gap: 12px;
-            animation: pulse 1.5s infinite;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            padding: 2rem;
+            animation: fadeIn 0.2s ease-out;
         }
 
-        @keyframes pulse {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; }
-            100% { opacity: 0.8; }
+        .extreme-alert-icon {
+            font-size: 3rem;
+            animation: shake 0.5s infinite;
         }
 
-        /* Leveling/XP Simulator */
-        .gamification-showcase {
+        .close-extreme-btn {
+            margin-top: 15px;
+            background: #ffffff;
+            color: #b91c1c;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            font-weight: 800;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(8deg); }
+            75% { transform: rotate(-8deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Gamification Sunshine Forest & Shop */
+        .gamification-hub {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 3rem 2rem;
+            padding: 2.5rem;
             margin-top: 4rem;
-            text-align: center;
             backdrop-filter: blur(12px);
             transition: all var(--transition-speed);
         }
 
-        .xp-bar-container {
-            width: 100%;
-            max-width: 600px;
-            height: 16px;
-            background-color: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            margin: 2rem auto;
-            border: 1px solid rgba(255,255,255,0.1);
-            overflow: hidden;
-            position: relative;
+        .gamification-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
         }
 
-        .xp-bar-fill {
+        @media (max-width: 768px) {
+            .gamification-flex {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .gamify-left-stats {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .xp-progress-box {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.03);
+            margin: 1.2rem 0;
+        }
+
+        .xp-bar-outer {
+            width: 100%;
+            height: 12px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 6px;
+            margin-top: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .xp-bar-inner {
             width: 65%;
             height: 100%;
             background: linear-gradient(90deg, var(--glow-color), #22c55e);
-            transition: width 0.5s ease-out;
-            box-shadow: 0 0 10px var(--glow-shadow);
+            border-radius: 6px;
+            transition: width 0.4s ease;
+            box-shadow: 0 0 8px var(--glow-shadow);
         }
 
-        .xp-controls {
+        .shop-items-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .shop-card {
+            background: rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 0.6rem;
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.2s;
         }
 
-        /* Download Section */
-        .download-section {
+        .shop-card:hover {
+            border-color: var(--glow-color);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .shop-card.selected {
+            border-color: var(--glow-color);
+            background: rgba(51, 255, 51, 0.05);
+            box-shadow: 0 0 8px var(--glow-shadow);
+        }
+
+        .forest-plantation {
+            background: rgba(0,0,0,0.3);
+            border: 2px solid #1e293b;
+            border-radius: 16px;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+        }
+
+        .forest-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            flex-grow: 1;
+            margin-bottom: 10px;
+        }
+
+        .grid-tile {
+            background: #271b12;
+            border: 1px solid #3d291d;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .grid-tile:hover {
+            border-color: var(--glow-color);
+            background: #2f2116;
+        }
+
+        /* Tree drawings using CSS shapes */
+        .plant-sprout {
+            width: 8px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 0 100% 0 100%;
+            transform: rotate(-15deg);
+            animation: growPop 0.2s ease-out;
+        }
+
+        .plant-sapling {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: growPop 0.2s ease-out;
+        }
+        .sapling-stem { width: 3px; height: 12px; background: #854d0e; }
+        .sapling-leaves { width: 12px; height: 6px; background: #22c55e; border-radius: 3px 3px 0 0; }
+
+        .tree-pine {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: growPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .pine-leaves {
+            width: 0;
+            height: 0;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-bottom: 24px solid #166534;
+        }
+        .pine-trunk { width: 4px; height: 8px; background: #713f12; }
+
+        .tree-sakura {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: growPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .sakura-blossom {
+            width: 24px;
+            height: 20px;
+            background: #f472b6;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #f472b6;
+        }
+        .sakura-trunk { width: 4px; height: 10px; background: #5c3f15; }
+
+        .tree-bonsai {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: growPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bonsai-crown {
+            width: 26px;
+            height: 14px;
+            background: #15803d;
+            border-radius: 8px;
+        }
+        .bonsai-trunk {
+            width: 4px;
+            height: 8px;
+            background: #5c3f15;
+            transform: skewX(-10deg);
+        }
+
+        @keyframes growPop {
+            from { transform: scale(0.3); }
+            to { transform: scale(1); }
+        }
+
+        /* AI Tutor Sandbox typewriter console */
+        .ai-tutor-hub {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            backdrop-filter: blur(12px);
+            text-align: left;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .ai-tutor-hub {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .ai-input-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .ai-textbox {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+            resize: none;
+            height: 90px;
+            transition: border-color 0.2s;
+        }
+
+        .ai-textbox:focus {
+            border-color: var(--glow-color);
+        }
+
+        .ai-select {
+            background: #020403;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: #ffffff;
+            outline: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .ai-response-console {
+            background: #010302;
+            border: 2px solid #1e293b;
+            border-radius: 16px;
+            padding: 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--glow-color);
+            overflow-y: auto;
+            min-height: 240px;
+            max-height: 280px;
+            box-shadow: inset 0 3px 10px rgba(0,0,0,0.9);
+            position: relative;
+        }
+
+        .ai-resp-scan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #010302;
+            z-index: 10;
+        }
+
+        .scanner-bar {
+            width: 100%;
+            height: 2px;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 10px var(--glow-color);
+            animation: scanLoop 1.5s infinite;
+        }
+
+        @keyframes scanLoop {
+            0% { transform: translateY(-50px); }
+            50% { transform: translateY(50px); }
+            100% { transform: translateY(-50px); }
+        }
+
+        /* Documentation and Guides section */
+        .doc-section {
+            padding-top: 0;
+        }
+
+        .doc-tabs-container {
+            display: flex;
+            gap: 8px;
+            border-bottom: 2px solid rgba(255,255,255,0.06);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .doc-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 800;
+            padding: 0.8rem 1.4rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .doc-tab-btn.active {
+            color: var(--glow-color);
+            border-bottom-color: var(--glow-color);
+        }
+
+        .doc-content-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: left;
+            backdrop-filter: blur(12px);
+            min-height: 300px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .doc-list {
+            margin: 1rem 0;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .doc-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .doc-code-block {
+            background: #010302;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: #a7f3d0;
+            overflow-x: auto;
+            margin: 12px 0;
+        }
+
+        /* Unified Backups Payload */
+        .backup-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.03);
+            padding: 1.2rem;
+            margin-top: 15px;
+        }
+
+        .backup-btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Installation & Download card */
+        .download-wrapper {
             background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
             border-top: 1px solid var(--border-color);
             padding: 6rem 2rem;
             text-align: center;
-            position: relative;
         }
 
-        .download-card {
+        .download-box {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 28px;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 4rem 2rem;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px var(--glow-shadow);
+            padding: 4rem 2.5rem;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 40px var(--glow-shadow);
             position: relative;
             backdrop-filter: blur(20px);
             transition: all var(--transition-speed);
         }
 
-        .download-badge {
+        .download-stamp {
             background: #ef4444;
             color: white;
             font-size: 0.75rem;
             font-weight: 800;
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 9999px;
             position: absolute;
-            top: -15px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
             letter-spacing: 1.5px;
-            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
         }
 
-        .guide-steps {
+        .install-guide-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 1.5rem;
-            margin-top: 3rem;
+            margin-top: 3.5rem;
             text-align: left;
         }
 
-        .step-card {
+        .guide-step-card {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.05);
             padding: 1.5rem;
             border-radius: 16px;
+            transition: border-color 0.2s;
         }
 
-        .step-num {
-            font-size: 1.5rem;
+        .guide-step-card:hover {
+            border-color: var(--glow-color);
+        }
+
+        .guide-step-num {
+            font-size: 1.6rem;
             font-weight: 800;
             color: var(--glow-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-family: 'Share Tech Mono', monospace;
-            transition: color var(--transition-speed);
-        }
-
-        .step-text {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
         }
 
         /* Footer */
         footer {
             padding: 3rem;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            background: #050706;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            background: #030403;
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         footer a {
@@ -821,21 +1541,23 @@
 
     </style>
 </head>
-<body class="theme-green">
+<body>
 
-    <!-- Header Navigation -->
+    <!-- Sticky Navigation Header -->
     <header>
         <div class="logo-container">
             <img class="logo-img" src="app/src/main/res/drawable/focus_flow_logo.png" alt="FocusFlow DXT" onerror="this.onerror=null; this.src='https://img.icons8.com/isometric/120/timer.png';">
-            <div>
+            <div style="text-align: left;">
                 <h1 class="logo-text">FocusFlow <span class="glow-text">DXT</span></h1>
-                <div class="logo-subtitle">Digital Study Labs Timer</div>
+                <div class="logo-subtitle">Premium Digital Study Labs Timer</div>
             </div>
         </div>
         <nav>
-            <a href="#features">Features</a>
             <a href="#simulator">Simulator</a>
-            <a href="#blocker">Focus Guards</a>
+            <a href="#guards">Focus Guards</a>
+            <a href="#gamify">Sunshine Forest</a>
+            <a href="#tutor">AI Tutor</a>
+            <a href="#docs">Documentation</a>
             <a href="#download" class="nav-btn">Download APK</a>
         </nav>
     </header>
@@ -843,418 +1565,406 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-badge">
-            <span class="glow-text">●</span> Offline-first Android Timer
+            <span class="glow-text">●</span> Pure Offline Android Engine
         </div>
-        <h2 class="hero-title">Vintage Hardware Aesthetics.<br>Intelligent <span class="glow-text">Focus Protection</span>.</h2>
-        <p class="hero-desc">An all-in-one productivity engine featuring high-contrast simulated LCD screens, responsive study blocks, precise kitchen alerts, and active package interception.</p>
+        <h2 class="hero-title">Futuristic Vintage Hardware.<br>Intense <span class="glow-text">Focus Safeguards</span>.</h2>
+        <p class="hero-desc">An advanced student productivity module featuring simulated high-contrast LCD dashboard faceplates, tactile physical preset controls, and real-time package interception.</p>
         
         <div class="hero-cta-group">
             <a href="./apk/FocusFlow-DXT.apk" class="btn-primary" download="FocusFlow-DXT.apk">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download APK
+                Download APK v1.0
             </a>
             <a href="#simulator" class="btn-secondary">
-                Try Simulator
+                Launch Emulator
             </a>
         </div>
 
-        <!-- The Interactive Emulator/Mockup -->
+        <!-- The Interactive Emulator / Hardware Dashboard -->
         <div class="mockup-container" id="simulator">
             <div class="hardware-bezel">
-                <div class="screws screw-tl"></div>
-                <div class="screws screw-tr"></div>
-                <div class="screws screw-bl"></div>
-                <div class="screws screw-br"></div>
+                <div class="screw screw-tl"></div>
+                <div class="screw screw-tr"></div>
+                <div class="screw screw-bl"></div>
+                <div class="screw screw-br"></div>
                 
                 <div class="hardware-header">
                     <span class="brand-text">FocusFlow DXT-2500</span>
                     <div class="hardware-leds">
-                        <div class="led led-power active" title="System Powered"></div>
-                        <div class="led led-mode" id="status-led" title="Timer Active"></div>
+                        <div class="led led-power active" title="Hardware Powered"></div>
+                        <div class="led led-mode" id="status-led" title="Timer Ticking"></div>
                     </div>
                 </div>
 
                 <!-- LCD Display Panel -->
                 <div class="lcd-display">
                     <div class="lcd-grid-overlay"></div>
-                    <div class="lcd-top-info">
-                        <span id="lcd-mode-title">STUDY CLOCK</span>
-                        <span id="lcd-xp-tracker">LVL 4: SCHOLAR</span>
+                    
+                    <!-- Top information labels -->
+                    <div class="lcd-top-row">
+                        <span id="lcd-mode-title">LIVE SYSTEM CLOCK</span>
+                        <span id="lcd-xp-tracker">LVL 1: NOVICE</span>
                     </div>
-                    <div class="lcd-main-time" id="lcd-main-time">11:56:00</div>
-                    <div class="lcd-footer-info">
-                        <span>STREAK: 12 DAYS</span>
-                        <span id="lcd-temp-display">TEMP: 26.5°C</span>
+                    
+                    <!-- Center contents - swaps based on display modes -->
+                    <div class="lcd-center-container">
+                        
+                        <!-- 1. Digital LCD -->
+                        <div class="lcd-digital-time" id="lcd-main-time">12:00:00</div>
+                        
+                        <!-- 2. Analog Face -->
+                        <div class="analog-clock-container" id="lcd-analog-clock">
+                            <div class="analog-clock-face">
+                                <div class="analog-ticks">
+                                    <span class="analog-tick-label tick-12">12</span>
+                                    <span class="analog-tick-label tick-3">3</span>
+                                    <span class="analog-tick-label tick-6">6</span>
+                                    <span class="analog-tick-label tick-9">9</span>
+                                </div>
+                                <div class="analog-center-dot"></div>
+                                <div class="clock-hand hand-hour" id="analog-hour"></div>
+                                <div class="clock-hand hand-minute" id="analog-min"></div>
+                                <div class="clock-hand hand-second" id="analog-sec"></div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Smart Watch Face -->
+                        <div class="smart-watch-dashboard" id="lcd-smart-watch">
+                            <div class="smart-watch-rings">
+                                <svg>
+                                    <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+                                    <circle class="ring-active" id="smart-ring-xp" cx="50" cy="50" r="40"></circle>
+                                    
+                                    <circle class="ring-bg" cx="50" cy="50" r="32"></circle>
+                                    <circle class="ring-inner-active" id="smart-ring-time" cx="50" cy="50" r="32"></circle>
+                                </svg>
+                                <div class="smart-watch-time-small" id="smart-time-small">12:00</div>
+                            </div>
+                            <div class="smart-watch-stats">
+                                <div>❤️ <span id="smart-pulse-rate">72</span> <span class="heart-pulse">BPM</span></div>
+                                <div>⚡ <span id="smart-battery-rate">88</span>% BAT</div>
+                                <div>📅 <span id="smart-date-str">JUN 15</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Vintage Pocket Watch -->
+                        <div class="pocket-watch-bezel" id="lcd-pocket-watch">
+                            <div class="pocket-watch-loop"></div>
+                            <div class="pocket-roman-ticks">
+                                <span class="analog-tick-label roman-12">XII</span>
+                                <span class="analog-tick-label roman-3">III</span>
+                                <span class="analog-tick-label roman-6">VI</span>
+                                <span class="analog-tick-label roman-9">IX</span>
+                            </div>
+                            <div class="analog-center-dot" style="background-color: #d4af37;"></div>
+                            <div class="clock-hand hand-hour" id="pocket-hour" style="background-color: #d4af37;"></div>
+                            <div class="clock-hand hand-minute" id="pocket-min" style="background-color: #d4af37;"></div>
+                            <div class="clock-hand hand-second" id="pocket-sec"></div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Bottom status labels -->
+                    <div class="lcd-bottom-row">
+                        <span id="lcd-streak-display">STREAK: 1 DAY</span>
+                        <span id="lcd-temp-display">TEMP: 28.5°C</span>
                     </div>
                 </div>
 
-                <!-- Hardware Push Buttons -->
+                <!-- Hardware Control Interface Buttons -->
                 <div class="hardware-panel">
                     <div class="control-row">
-                        <button class="hw-btn active-preset" onclick="selectPreset('clock', 'CLOCK MODE', 0)">Live Clock</button>
-                        <button class="hw-btn" onclick="selectPreset('pomo', 'POMODORO STUDY', 1500)">🍅 Pomodoro</button>
-                        <button class="hw-btn" onclick="selectPreset('sprint', 'QUICK SPRINT', 900)">⚡ Sprint</button>
+                        <button class="hw-btn active-preset" onclick="applyPreset('clock', 'LIVE SYSTEM CLOCK', 0)">Live Clock</button>
+                        <button class="hw-btn" onclick="applyPreset('pomo', 'POMODORO COUNTDOWN', 1500)">🍅 Pomodoro</button>
+                        <button class="hw-btn" onclick="applyPreset('sprint', 'QUICK STUDY SPRINT', 900)">⚡ Sprint</button>
+                        <button class="hw-btn" onclick="applyPreset('intense', 'DEEP SCHOLAR SESS', 3000)">📚 Intense</button>
                     </div>
                     <div class="control-row">
-                        <button class="hw-btn" onclick="selectPreset('intense', 'DEEP SCHOLAR', 3000)">📚 Intense</button>
-                        <button class="hw-btn" onclick="selectPreset('boil', 'BOILING PRESET', 300)">🔥 Boil</button>
-                        <button class="hw-btn" onclick="selectPreset('maggi', 'COOKING DXT', 120)">🍜 Maggi</button>
+                        <button class="hw-btn" onclick="applyPreset('break', 'STUDY REST BREAK', 300)">☕ Break</button>
+                        <button class="hw-btn" onclick="applyPreset('boil', 'KITCHEN BOILING', 300)">🔥 Boil Pres</button>
+                        <button class="hw-btn" onclick="applyPreset('maggi', 'COOKING INST NOODLES', 120)">🍜 Maggi Pres</button>
                     </div>
-                    <div class="control-row" style="margin-top: 15px;">
-                        <button class="hw-btn hw-btn-action start-btn" id="sim-start" onclick="toggleTimer()">START</button>
-                        <button class="hw-btn hw-btn-action" onclick="resetTimer()">RESET</button>
+                    <div class="control-row" style="margin-top: 12px;">
+                        <button class="hw-btn hw-btn-action start-btn" id="btn-toggle" onclick="toggleTimerState()">START</button>
+                        <button class="hw-btn hw-btn-action" onclick="resetTimerState()">RESET</button>
+                    </div>
+
+                    <!-- Ambient Soundscapes loop module -->
+                    <div class="soundscapes-panel">
+                        <div class="soundscapes-title">🔊 Ambient Frequencies (Web Audio Synthesizer)</div>
+                        <button class="sound-btn" id="s-none" onclick="toggleSound('None', this)">🔇 Off</button>
+                        <button class="sound-btn" id="s-white" onclick="toggleSound('White Noise', this)">🍃 White</button>
+                        <button class="sound-btn" id="s-ocean" onclick="toggleSound('Ocean Waves', this)">🌊 Ocean</button>
+                        <button class="sound-btn" id="s-space" onclick="toggleSound('Deep Space', this)">🛸 Space</button>
+                        <button class="sound-btn" id="s-alpha" onclick="toggleSound('Binaural Beats', this)">🧠 Alpha</button>
+                    </div>
+
+                    <!-- Hardware Telemetry offset slider -->
+                    <div style="margin-top: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary);">
+                        <span>🌡️ Sensor Temperature Calibration:</span>
+                        <input type="range" id="temp-offset" min="-5" max="5" value="0" step="0.5" style="accent-color: var(--glow-color); width: 80px;" oninput="recalibrateTemperature()">
+                        <span id="temp-offset-lbl">0°C offset</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Dynamic Theme Configurator -->
+            <!-- Accent Theme Picker Panel -->
             <div class="theme-selector-card">
-                <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Simulate Display Colors</span>
+                <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-secondary);">Simulate Console Color Themes</span>
                 <div class="theme-selectors">
-                    <div class="theme-dot active" data-theme="green" onclick="changeTheme('green', this)" title="Retro Green"></div>
-                    <div class="theme-dot" data-theme="amber" onclick="changeTheme('amber', this)" title="Amber Glow"></div>
-                    <div class="theme-dot" data-theme="cyber" onclick="changeTheme('cyber', this)" title="Cyber Punk"></div>
-                    <div class="theme-dot" data-theme="blue" onclick="changeTheme('blue', this)" title="Neon Blue"></div>
-                    <div class="theme-dot" data-theme="amoled" onclick="changeTheme('amoled', this)" title="AMOLED Dark"></div>
-                    <div class="theme-dot" data-theme="steel" onclick="changeTheme('steel', this)" title="Brushed Steel"></div>
+                    <div class="theme-dot active" data-theme="green" onclick="changeGlobalTheme('green', this)" title="Retro Green"></div>
+                    <div class="theme-dot" data-theme="amber" onclick="changeGlobalTheme('amber', this)" title="Amber Glow"></div>
+                    <div class="theme-dot" data-theme="cyber" onclick="changeGlobalTheme('cyber', this)" title="Cyber Punk"></div>
+                    <div class="theme-dot" data-theme="blue" onclick="changeGlobalTheme('blue', this)" title="Neon Blue"></div>
+                    <div class="theme-dot" data-theme="amoled" onclick="changeGlobalTheme('amoled', this)" title="AMOLED Dark"></div>
+                    <div class="theme-dot" data-theme="steel" onclick="changeGlobalTheme('steel', this)" title="Brushed Steel"></div>
+                </div>
+                
+                <!-- Faceplate selector dials -->
+                <div style="display: flex; gap: 8px; margin-top: 8px;">
+                    <button class="sound-btn active" id="face-0" onclick="switchDisplayFace(0, this)">Digital LCD</button>
+                    <button class="sound-btn" id="face-1" onclick="switchDisplayFace(1, this)">Analog Face</button>
+                    <button class="sound-btn" id="face-2" onclick="switchDisplayFace(2, this)">Smart Watch</button>
+                    <button class="sound-btn" id="face-3" onclick="switchDisplayFace(3, this)">Pocket Watch</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Key Features section -->
     <section class="section-container" id="features">
-        <h2 class="section-title">Engineered For Deep Work</h2>
-        <p class="section-subtitle">A closer look at how FocusFlow DXT helps you block distractions, level up your learning, and control your time.</p>
+        <h2 class="section-title">Fully Isolated Core Productivity</h2>
+        <p class="section-subtitle">FocusFlow DXT blocks out alerts and tracks your learning metrics locally without external trackers.</p>
         
         <div class="grid-features">
             <div class="feature-card">
-                <div class="feature-icon">⏱️</div>
-                <h3>Hardware Micro-Bezel Modes</h3>
-                <p>Features quick-adjust digital dial layouts with customized audio warnings, live ticking, and precision lap recorders to match your physical study workflow.</p>
+                <div class="feature-icon">⚙️</div>
+                <h3>Hardware Dial Layouts</h3>
+                <p>Customize countdown times down to seconds using responsive dials, complete with ticking sound alerts and persistent foreground notification banners.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
-                <h3>Active App Interception</h3>
-                <p>Blocks distracting social feeds and notification hubs in extreme real-time. Works offline using secure Package Manager listeners without tracking user data.</p>
+                <h3>Active App Guard</h3>
+                <p>Monitors package launches offline using local usage tracking logs. Social feeds are locked automatically while study timers are running.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon">🎮</div>
-                <h3>Scholastic RPG Gamification</h3>
-                <p>Gain level milestones and experience (XP) indices for every minute focused. Keep fire streaks burning to turn hard work into an engaging game.</p>
+                <h3>RPG Academic Ranks</h3>
+                <p>Convert your study logs into experience points (XP) and unlock rank rewards. Keep fire streak multipliers alive with daily study blocks.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">💾</div>
-                <h3>Unified Database Portal</h3>
-                <p>Instantly back up your records, level history, and blocked profiles into encrypted JSON code. Easily copy to clipboard or load from another Android device.</p>
+                <div class="feature-icon">🌲</div>
+                <h3>Sunshine Forest Shop</h3>
+                <p>Earn coins for focusing, buy seeds from the shop, and plant trees. Grow virtual Pine, Sakura, or Bonsai tree lines to log your focus history.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🎓</div>
-                <h3>Classroom Lecture Workspace</h3>
-                <p>Sandboxed lecture panels embedded with Wikipedia research, Khan Academy study cards, and PiP (Picture-in-Picture) overlays for seamless multitasking.</p>
+                <h3>Sandboxed Lecture WebView</h3>
+                <p>Access study courses and look up formulas inside a secure classroom portal. Supports picture-in-picture mode to run timer meters alongside documents.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🔋</div>
-                <h3>Pure AMOLED Mode</h3>
-                <p>Saves energy on screens using absolute black screens (#000000) that disable pixels, making it the perfect night companion on your study desk.</p>
+                <h3>Physical Thermal Sensor</h3>
+                <p>Monitors motherboard temperatures in real-time to avoid overheating, adjusting display brightness and alerts to protect hardware health.</p>
             </div>
         </div>
     </section>
 
-    <!-- Deep-Dive Application Audit & Technical Analysis Section -->
-    <section class="section-container" id="app-analysis" style="padding-top: 0;">
-        <h2 class="section-title">Technical Architecture & Analysis</h2>
-        <p class="section-subtitle">A deep breakdown of the Kotlin & Jetpack Compose modules powering FocusFlow DXT.</p>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; text-align: left; margin-bottom: 3rem;">
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px);">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--glow-color); display: flex; align-items: center; gap: 10px;">
-                    <span>⚙️</span> Core Service-Driven State Machine
-                </h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                    Unlike standard countdown applications that terminate when swiped away, FocusFlow DXT is engineered around a robust <strong>Foreground Service (`TimerService.kt`)</strong>. It serves as the single source of truth for timer states, lap details, and active trackers:
-                </p>
-                <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square; display: flex; flex-direction: column; gap: 8px;">
-                    <li><strong>Compose State Binding:</strong> Binds foreground states with Jetpack Compose views using Kotlin <code>MutableStateFlow</code>, enabling real-time UI synchronization.</li>
-                    <li><strong>Dual Interception Engine:</strong> Combines Android <code>UsageStatsManager</code> background thread loops (polled at set grace thresholds) with a fallback <code>AccessibilityService</code> listener to maximize blocking reliability.</li>
-                    <li><strong>Simulated Hardware Display Modes:</strong> The rendering architecture supports four distinct faceplate configurations: Classic Digital LCD, Analog ticking hands, Minimalist Smart Watch dashboard, and vintage Pocket Watch casing.</li>
-                </ul>
-            </div>
-
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px);">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--glow-color); display: flex; align-items: center; gap: 10px;">
-                    <span>🌱</span> Simulated Forest & Audio Synthesizers
-                </h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                    FocusFlow DXT merges classic timer aesthetics with gamified progression systems and custom ambient audio drivers:
-                </p>
-                <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square; display: flex; flex-direction: column; gap: 8px;">
-                    <li><strong>Sunshine Forest Plantations:</strong> Focus minutes generate Scholar Coins. Use them in the virtual Sunshine Shop to unlock custom trees (Pine, Sakura, Bonsai) or purchase special fertilizers to accelerate growth logs.</li>
-                    <li><strong>Ambient Soundscapes:</strong> Integrated media player simulates soothing environment tracks including White Noise, Ocean Waves, and Forest rustles to isolate student workspace acoustics.</li>
-                    <li><strong>Sensor Calibration:</strong> Interfaces with device ambient temperature hardware sensors (`Sensor.TYPE_AMBIENT_TEMPERATURE`) to render real room heat, with built-in digital offset sliders for calibration.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; text-align: left;">
-            
-            <!-- Privacy Section -->
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid var(--glow-color);">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span>🔒</span> Privacy Policy & Trust Shield
-                </h3>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
-                    <strong>100% Private, Local-First, and Serverless:</strong> FocusFlow DXT does not utilize telemetry tracking or cloud database networks.
-                </p>
-                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
-                    <li><strong>No External Tracking:</strong> Distraction logs, application usage times, and blacklisted app names are stored purely locally inside encrypted SharedPreferences.</li>
-                    <li><strong>Zero Telemetry:</strong> No analytics trackers (like Firebase Analytics or Flurry) are embedded, making the app immune to data leaks.</li>
-                    <li><strong>Offline Independence:</strong> The application does not require internet permissions to lock apps or calculate scholar XP levels.</li>
-                </ul>
-            </div>
-
-            <!-- Limitations Section -->
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid #ef4444;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span>⚠️</span> Hardware Limits & OS Optimization
-                </h3>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
-                    Operating system sandboxing and background limitations may affect functionality on specific Android skins:
-                </p>
-                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
-                    <li><strong>OEM Sleep Policies:</strong> Strict skins (MIUI/Xiaomi, ColorOS/Oppo, OxygenOS) may terminate background services. Users must turn off battery optimizations manually.</li>
-                    <li><strong>Overlay Limitation:</strong> Extreme mode warning overlays require the "Display over other apps" system overlay permission, which must be enabled during initial startup settings.</li>
-                    <li><strong>System-Blocked Access:</strong> Certain system-secured settings, dialers, and package screens cannot be intercepted due to core Android security policies.</li>
-                </ul>
-            </div>
-
-            <!-- Pricing Section -->
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(12px); border-left: 4px solid #00e5ff;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span>💎</span> 100% Free & Open-Source Policy
-                </h3>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
-                    FocusFlow DXT is free software built for students, scholars, and researchers.
-                </p>
-                <ul style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 6px;">
-                    <li><strong>No Advertisements:</strong> Zero display banners, interstitial advertisements, or third-party promotional content.</li>
-                    <li><strong>No In-App Purchases:</strong> Virtual coins used for forest plantations are earned exclusively through focus time. No pay-to-win hooks.</li>
-                    <li><strong>MIT Licensed Code:</strong> The codebase is fully transparent, allowing audit verification, forks, or packaging adjustments without restrictions.</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Interactive Focus Guard (App Blocker) Showcase -->
-    <section class="section-container" id="blocker" style="padding-top: 0;">
-        <h2 class="section-title">Focus Guards Simulator</h2>
-        <p class="section-subtitle">Toggle smart profiles to see how FocusFlow DXT blocks distractors and prevents study procrastination.</p>
+    <!-- Focus Guards Simulator -->
+    <section class="section-container" id="guards" style="padding-top: 0;">
+        <h2 class="section-title">Focus Guards App Blocker</h2>
+        <p class="section-subtitle">Test out how the Android app blocker handles distractions in real-time.</p>
         
-        <div class="interactive-blocker">
-            <div class="blocker-controls">
-                <button class="guard-btn active" onclick="simulateGuard('gentle', this)">
-                    <div>
-                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Gentle Mode</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Basic in-app warning reminder banner.</div>
-                    </div>
-                    <span class="guard-badge gentle">Gentle</span>
-                </button>
+        <div class="focus-guards-hub">
+            <div class="guards-checklist">
+                <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Select Distractor Apps to Block:</h4>
                 
-                <button class="guard-btn" onclick="simulateGuard('moderate', this)">
-                    <div>
-                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Moderate Mode</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Fires high priority local system notification checks.</div>
-                    </div>
-                    <span class="guard-badge moderate">Moderate</span>
-                </button>
+                <div class="checklist-item active" onclick="toggleBlocklistApp('yt', this)">
+                    <span>🎥 YouTube Shorts / Videos</span>
+                    <div class="custom-checkbox" id="chk-yt">✓</div>
+                </div>
                 
-                <button class="guard-btn" onclick="simulateGuard('extreme', this)">
-                    <div>
-                        <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 4px;">Extreme Mode</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Plays alarm sound overlays and forces app lock until dismissed.</div>
-                    </div>
-                    <span class="guard-badge extreme">Extreme</span>
-                </button>
+                <div class="checklist-item active" onclick="toggleBlocklistApp('ig', this)">
+                    <span>📸 Instagram Reels / Stories</span>
+                    <div class="custom-checkbox" id="chk-ig">✓</div>
+                </div>
+                
+                <div class="checklist-item" onclick="toggleBlocklistApp('tt', this)">
+                    <span>🎵 TikTok Videos</span>
+                    <div class="custom-checkbox" id="chk-tt"></div>
+                </div>
+
+                <div class="checklist-item" onclick="toggleBlocklistApp('sc', this)">
+                    <span>👻 Snapchat Chats</span>
+                    <div class="custom-checkbox" id="chk-sc"></div>
+                </div>
+
+                <div class="level-triggers">
+                    <button class="trigger-btn active-gentle" id="t-gentle" onclick="setGuardLevel('gentle')">Gentle</button>
+                    <button class="trigger-btn" id="t-moderate" onclick="setGuardLevel('moderate')">Moderate</button>
+                    <button class="trigger-btn" id="t-extreme" onclick="setGuardLevel('extreme')">Extreme</button>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px; font-size: 0.85rem; padding: 0.6rem 1rem;" onclick="testDistractionAlert()">Simulate Accessing App</button>
             </div>
             
-            <div class="blocker-status" id="blocker-status-box">
-                <!-- Content injected dynamically -->
-                <div id="guard-default-content">
+            <div class="guard-preview-window" id="guard-status-window">
+                <!-- Gentle overlay contents -->
+                <div id="guard-default-screen">
                     <span style="font-size: 3rem;">📱</span>
-                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Blacklisted App Accessed</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 300px; margin-top: 8px;">(Simulated App Blocker Alert trigger below)</p>
+                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Simulator Console</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; max-width: 250px; margin-top: 6px;">Select apps to block, choose a guard level, and trigger a warning popup.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Live XP Progression Simulator -->
-    <section class="section-container" style="padding-top: 0;">
-        <h2 class="section-title">Track Your Academic Level</h2>
-        <p class="section-subtitle">Earn 1 XP per minute of focus time. Simulate how levels grow in the gamified study hub.</p>
+    <!-- Gamification & Sunshine Forest -->
+    <section class="section-container" id="gamify" style="padding-top: 0;">
+        <h2 class="section-title">Sunshine Forest & RPG Progression</h2>
+        <p class="section-subtitle">Earn 1 XP per minute of focus time. Grow custom seeds into full trees in your plantation.</p>
         
-        <div class="gamification-showcase">
-            <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;"><span id="showcase-xp">65</span> / 100 XP</h3>
-            <p style="color: var(--text-secondary);">Rank: <span class="glow-text" id="showcase-rank" style="font-weight: 800;">Beginner Scholar (LVL 1)</span></p>
-            
-            <div class="xp-bar-container">
-                <div class="xp-bar-fill" id="showcase-xp-fill"></div>
-            </div>
+        <div class="gamification-hub">
+            <div class="gamification-flex">
+                <div class="gamify-left-stats">
+                    <div>
+                        <h3 style="font-size: 1.6rem; color: var(--glow-color);"><span id="lbl-xp">65</span> / 100 XP</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">Current Rank: <strong id="lbl-rank" class="glow-text">Novice Scholar (LVL 1)</strong></p>
+                        
+                        <div class="xp-progress-box">
+                            <span style="font-size: 0.75rem; font-weight: bold;">Milestone Progress:</span>
+                            <div class="xp-bar-outer">
+                                <div class="xp-bar-inner" id="xp-fill"></div>
+                            </div>
+                        </div>
 
-            <div class="xp-controls">
-                <button class="btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;" onclick="addSimulatedXp(15)">+15 Mins Focus (15 XP)</button>
-                <button class="btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.95rem; border-color: rgba(239, 68, 68, 0.4);" onclick="resetSimulatedXp()">Reset XP</button>
+                        <div style="font-size: 0.9rem; margin-bottom: 15px;">
+                            🪙 Scholar Coins Balance: <strong style="color: #fbbf24;" id="lbl-coins">150</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.95rem; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Sunshine Shop (Buy Seeds)</h4>
+                        <div class="shop-items-grid">
+                            <div class="shop-card" id="shop-pine" onclick="selectShopItem('pine', 50, this)">
+                                <span>🌲 Pine Seed</span>
+                                <span style="color: #fbbf24;">50 🪙</span>
+                            </div>
+                            <div class="shop-card" id="shop-sakura" onclick="selectShopItem('sakura', 80, this)">
+                                <span>🌸 Sakura Seed</span>
+                                <span style="color: #fbbf24;">80 🪙</span>
+                            </div>
+                            <div class="shop-card" id="shop-bonsai" onclick="selectShopItem('bonsai', 120, this)">
+                                <span>🪴 Bonsai Seed</span>
+                                <span style="color: #fbbf24;">120 🪙</span>
+                            </div>
+                            <div class="shop-card" id="shop-fert" onclick="selectShopItem('fertilizer', 30, this)">
+                                <span>🧪 Fertilizer</span>
+                                <span style="color: #fbbf24;">30 🪙</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary" style="margin-top: 12px; font-size: 0.8rem; padding: 0.5rem 1rem; width: 100%; justify-content: center;" onclick="triggerXPAdd(15)">+15 Mins Focus Session (+15 XP)</button>
+                    </div>
+                </div>
+
+                <div class="forest-plantation">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 0.85rem; font-weight: bold; text-transform: uppercase;">Plantation Grid (Click tile to plant/fertilize)</span>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);" id="selected-seed-lbl">No Seed Selected</span>
+                    </div>
+                    
+                    <div class="forest-grid" id="plantation-grid">
+                        <!-- 16 tiles generated by JS -->
+                    </div>
+                    
+                    <span style="font-size: 0.7rem; color: var(--text-secondary);">Forest trees planted grow over 10 seconds. Use fertilizer for instant growth.</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Detailed How-To-Use Guide Section -->
-    <section class="section-container" id="how-to-use" style="padding-top: 0;">
-        <h2 class="section-title">How to Use FocusFlow DXT</h2>
-        <p class="section-subtitle">A step-by-step operational manual for students and scholars to maximize focus periods.</p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: border-color var(--transition-speed);">
-                <div style="background: rgba(51, 255, 51, 0.1); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--glow-color); font-size: 1.25rem; font-family: 'Share Tech Mono', monospace; margin-bottom: 1.25rem;">01</div>
-                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Grant System Permissions</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">To unlock app blocking, FocusFlow requires Usage Access. Tap the settings gear icon ➔ Focus Zone ➔ Click "Permit Usage Access" ➔ Enable toggle for FocusFlow DXT.</p>
-                <span style="background: rgba(239, 68, 68, 0.15); color: #fca5a5; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;">CRITICAL FOR BLOCKER</span>
-            </div>
-
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: border-color var(--transition-speed);">
-                <div style="background: rgba(51, 255, 51, 0.1); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--glow-color); font-size: 1.25rem; font-family: 'Share Tech Mono', monospace; margin-bottom: 1.25rem;">02</div>
-                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Create Blocker Blacklist</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">Open the settings panel ➔ Select Installed User Apps. Tap the checkboxes to block applications (e.g. Instagram, YouTube, TikTok). Use the search bar to find packages easily.</p>
-                <span style="background: rgba(0, 229, 255, 0.15); color: #99f6e4; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;">FULLY CUSTOMIZABLE</span>
-            </div>
-
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: border-color var(--transition-speed);">
-                <div style="background: rgba(51, 255, 51, 0.1); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--glow-color); font-size: 1.25rem; font-family: 'Share Tech Mono', monospace; margin-bottom: 1.25rem;">03</div>
-                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Run Study Presets & Dials</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">Choose a default mode: 🍅 Pomodoro, Intense (50m), Sprint (15m), or custom seconds dials. Press Start. The background service locks screen contexts upon unauthorized app usage.</p>
-                <span style="background: rgba(167, 243, 208, 0.15); color: #6ee7b7; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;">AUTOMATED INTERCEPT</span>
-            </div>
-
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: border-color var(--transition-speed);">
-                <div style="background: rgba(51, 255, 51, 0.1); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--glow-color); font-size: 1.25rem; font-family: 'Share Tech Mono', monospace; margin-bottom: 1.25rem;">04</div>
-                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Backup Progress via JSON</h4>
-                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">Go to the Profile tab. Select "Save Backup File" or click "Copy Code" to export XP, milestones, and settings. To load, paste the text code into the portal text area.</p>
-                <span style="background: rgba(253, 230, 138, 0.15); color: #fcd34d; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;">CROSS-DEVICE SYNC</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep-Dive Specifications & Features Breakdowns -->
-    <section class="section-container" id="specifications" style="padding-top: 0;">
-        <h2 class="section-title">Feature Specifications</h2>
-        <p class="section-subtitle">Deep dive into the comprehensive modules that make FocusFlow DXT a reliable productivity ecosystem.</p>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 3rem 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.4); transition: border-color var(--transition-speed);">
-            <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+    <!-- AI Tutor Sandbox Section -->
+    <section class="section-container" id="tutor" style="padding-top: 0;">
+        <h2 class="section-title">Sandboxed AI Study Tutor</h2>
+        <p class="section-subtitle">Connect your study sessions to AI tutors and check notes without leaving the app.</p>
+        
+        <div class="ai-tutor-hub">
+            <div class="ai-input-panel">
+                <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Consult Simulated AI Tutor:</h4>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Select Model Provider:</label>
+                    <select class="ai-select" id="ai-model-provider">
+                        <option value="gemini">Gemini Flash 1.5 (Default)</option>
+                        <option value="groq">Groq LLaMA 3 70B</option>
+                        <option value="cerebras">Cerebras CS-2 Engine</option>
+                        <option value="mistral">Mistral Codestral 22B</option>
+                    </select>
+                </div>
                 
-                <!-- Spec 1: Clock & Presets -->
-                <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 2rem;">
-                    <div style="font-size: 3rem; color: var(--glow-color); text-align: center; line-height: 1;">🕒</div>
-                    <div>
-                        <h4 style="font-size: 1.35rem; margin-bottom: 8px; color: var(--text-primary);">Ticking Hardware LCD Clock & Dials</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
-                            The main interface simulates a classic desktop ticking console. It displays AM/PM hours, Gregorian dates, streak counts, and fluctuating temperature indices.
-                        </p>
-                        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square;">
-                            <li><strong>Multi-Preset Mode Selection:</strong> Quick buttons switch between Pomodoro (25 Min), Sprint (15 Min), Intense Study (50 Min), Break (5 Min), Maggi cooking preset (2 Min), and Boiling preset (5 Min).</li>
-                            <li><strong>Adjust Dial Adapters:</strong> Programmatic adjustments let you modify countdown intervals directly down to seconds.</li>
-                            <li><strong>Ticking Loop Sounds:</strong> Immersive raw background audio files simulate realistic clock ticking, reinforcing psychological work urgency.</li>
-                        </ul>
-                    </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <label style="font-size: 0.75rem; color: var(--text-secondary);">Enter Study Prompt:</label>
+                    <textarea class="ai-textbox" id="ai-user-prompt" placeholder="e.g. 'Explain how photosysnthesis works' or 'Write a 15-minute quick study plan for calculus'"></textarea>
                 </div>
-
-                <!-- Spec 2: App Blocker Guards -->
-                <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 2rem;">
-                    <div style="font-size: 3rem; color: var(--glow-color); text-align: center; line-height: 1;">🛡️</div>
-                    <div>
-                        <h4 style="font-size: 1.35rem; margin-bottom: 8px; color: var(--text-primary);">Offline Smart App Interceptor (Focus Guards)</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
-                            Keep social feeds and short-video distractions away. FocusFlow works completely offline, calling local package queries without uploading usage histories to third-party servers.
-                        </p>
-                        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square;">
-                            <li><strong>Installed User App Selector:</strong> Instantly queries user-installed packages, listing them in a checkbox dialog window. Includes real-time matching via a package search bar.</li>
-                            <li><strong>Gentle Warning Profile:</strong> Triggers a floating, non-blocking reminder overlay to encourage users to head back to the timer.</li>
-                            <li><strong>Moderate Reminder Profile:</strong> Generates system alerts and persistent notification alerts for moderate focus corrections.</li>
-                            <li><strong>Extreme Alarm Profile:</strong> Plays custom warning buzzing sounds and displays a fullscreen lockdown window until the blacklisted application is closed.</li>
-                        </ul>
-                    </div>
+                <button class="btn-primary" style="justify-content: center; font-size: 0.9rem;" id="ai-send-btn" onclick="queryAITutor()">Ask AI Tutor</button>
+            </div>
+            
+            <div class="ai-response-console" id="ai-console-out">
+                <div id="ai-placeholder-msg">
+                    <span style="color: #64748b;">// READY FOR COMPRESSED TELEMETRY QUERY...</span><br>
+                    <span style="color: #64748b;">// Type a question on the left and submit.</span>
                 </div>
-
-                <!-- Spec 3: Educational Sandbox -->
-                <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 2rem;">
-                    <div style="font-size: 3rem; color: var(--glow-color); text-align: center; line-height: 1;">🎓</div>
-                    <div>
-                        <h4 style="font-size: 1.35rem; margin-bottom: 8px; color: var(--text-primary);">Embedded Sandbox Classroom Workspace</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
-                            Study and research directly inside a safe, sandboxed WebView environment, avoiding navigation to main browser apps where notifications trigger distractions.
-                        </p>
-                        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square;">
-                            <li><strong>Wikipedia Portal Integration:</strong> Fast-access academic research portal with automatic loading capabilities.</li>
-                            <li><strong>Khan Academy Courses:</strong> Launches interactive course maps directly within the sandbox interface.</li>
-                            <li><strong>Picture-in-Picture (PiP):</strong> Supports picture-in-picture mode so you can watch lectures or monitor timer ticks in overlay blocks while using write-ups or docs.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Spec 4: Gamification -->
-                <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem;">
-                    <div style="font-size: 3rem; color: var(--glow-color); text-align: center; line-height: 1;">🎮</div>
-                    <div>
-                        <h4 style="font-size: 1.35rem; margin-bottom: 8px; color: var(--text-primary);">Gamification & RPG Study Progression</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
-                            Turn study sessions into an RPG journey. Level up your status as you spend time doing actual deep work.
-                        </p>
-                        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; padding-left: 20px; list-style-type: square;">
-                            <li><strong>XP Calculations:</strong> Earn exactly 1 XP for every completed focus minute. Cumulative milestones automatically level you up.</li>
-                            <li><strong>Streak Tracker:</strong> Tracks daily logs, rewarding consecutive streak days with 15 XP bonuses.</li>
-                            <li><strong>Scholar Titles:</strong> Titles automatically update across the top display banner (e.g. Beginner Scholar, Active Student, Time Specialist, Focus Master).</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Download Block -->
-    <section class="download-section" id="download">
-        <div class="download-card">
-            <div class="download-badge">STABLE VERSION</div>
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Boost Your Focus?</h2>
-            <p style="color: var(--text-secondary); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.6;">Download the installation APK file below. The package contains no advertisements, runs fully offline, and is completely open source.</p>
+    <!-- Technical Documentation & Guides tab system -->
+    <section class="section-container" id="docs" style="padding-top: 0;">
+        <h2 class="section-title">System Manual & Core Architecture</h2>
+        <p class="section-subtitle">Deep dive into the architecture, package configuration, and battery optimization details of FocusFlow DXT.</p>
+        
+        <div class="doc-tabs-container">
+            <button class="doc-tab-btn active" id="tab-0" onclick="switchDocTab(0)">Operational Guide</button>
+            <button class="doc-tab-btn" id="tab-1" onclick="switchDocTab(1)">Service Architecture</button>
+            <button class="doc-tab-btn" id="tab-2" onclick="switchDocTab(2)">Battery Optimization</button>
+            <button class="doc-tab-btn" id="tab-3" onclick="switchDocTab(3)">Privacy & Free License</button>
+        </div>
+
+        <div class="doc-content-box" id="doc-tab-content">
+            <!-- Content will be injected dynamically -->
+        </div>
+    </section>
+
+    <!-- Download & Installation Section -->
+    <section class="download-wrapper" id="download">
+        <div class="download-box">
+            <div class="download-stamp">STABLE APK</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.75rem;">Download FocusFlow DXT</h2>
+            <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto 2.5rem; line-height: 1.6;">Get the direct APK build here. No advertising banners, no in-app purchases, and zero tracker packages. Simple retro digital dials.</p>
             
-            <a href="./apk/FocusFlow-DXT.apk" class="btn-primary" style="padding: 1.25rem 3.5rem; font-size: 1.25rem;" download="FocusFlow-DXT.apk">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                FocusFlow-DXT.apk (v2.5.0)
+            <a href="./apk/FocusFlow-DXT.apk" class="btn-primary" style="padding: 1.2rem 3rem; font-size: 1.2rem;" download="FocusFlow-DXT.apk">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                FocusFlow-DXT.apk (v1.0.0)
             </a>
 
-            <div class="guide-steps">
-                <div class="step-card">
-                    <div class="step-num">01.</div>
+            <div class="install-guide-grid">
+                <div class="guide-step-card">
+                    <div class="guide-step-num">01</div>
                     <h4 style="margin-bottom: 6px;">Download</h4>
-                    <p class="step-text">Tap the download button to save FocusFlow-DXT.apk onto your Android device.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Tap the download button to transfer FocusFlow-DXT.apk onto your Android handset.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">02.</div>
-                    <h4 style="margin-bottom: 6px;">Allow Sources</h4>
-                    <p class="step-text">Allow installation from "Unknown Sources" inside your phone settings if prompted.</p>
+                <div class="guide-step-card">
+                    <div class="guide-step-num">02</div>
+                    <h4 style="margin-bottom: 6px;">Enable Sources</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Tap the downloaded file and toggle "Allow from this source" when prompted by your browser settings.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">03.</div>
-                    <h4 style="margin-bottom: 6px;">Unleash Focus</h4>
-                    <p class="step-text">Open the application, grant Usage Stats permissions, and kickstart your studies.</p>
+                <div class="guide-step-card">
+                    <div class="guide-step-num">03</div>
+                    <h4 style="margin-top: 6px;">Grant Access</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Open the app, slide to Focus settings, and tap "Usage Stats Access" to enable app blocking capabilities.</p>
                 </div>
             </div>
         </div>
@@ -1262,16 +1972,60 @@
 
     <!-- Footer -->
     <footer>
-        <p style="margin-bottom: 10px;">FocusFlow DXT is an open-source tool licensed under the MIT License.</p>
-        <p>Created by <a href="https://github.com/SudhirDevOps1" target="_blank">Sudhir Singh (@SudhirDevOps1)</a></p>
+        <p style="margin-bottom: 10px;">FocusFlow DXT is an open-source productivity program under the MIT License.</p>
+        <p>Created by <a href="https://github.com/SudhirDevOps1" target="_blank" class="glow-text">Sudhir Singh (@SudhirDevOps1)</a></p>
     </footer>
 
-    <!-- Interactive JS logic -->
+    <!-- JS Logic Scripts -->
     <script>
-        // Theme customization logic
-        function changeTheme(themeName, element) {
-            document.body.className = '';
-            document.body.classList.add('theme-' + themeName);
+        // Global variables for emulator timer
+        let timerInterval = null;
+        let isTimerRunning = false;
+        let currentMode = 'clock'; // clock, timer
+        let secondsLeft = 0;
+        let selectedTotalSeconds = 0;
+        let currentDisplayStyle = 0; // 0: Digital, 1: Analog, 2: Smart Watch, 3: Pocket Watch
+        let temperatureOffset = 0.0;
+
+        // Soundscape variables using Web Audio API
+        let audioCtx = null;
+        let currentSoundscapeName = 'None';
+        let soundscapeAudioNodes = {
+            source: null,
+            gainNode: null,
+            extraNodes: []
+        };
+
+        // Gamification States
+        let currentXP = 65;
+        let currentLevel = 1;
+        let coinsBalance = 150;
+        let selectedShopSeed = null;
+        let selectedSeedPrice = 0;
+
+        // Focus Guards States
+        const activeBlocklistApps = { yt: true, ig: true, tt: false, sc: false };
+        let activeGuardLevel = 'gentle';
+
+        // 1. Initializers & DOM loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initClockTick();
+            initPlantationGrid();
+            switchDocTab(0);
+            
+            // Periodically randomize smart pulse rate & battery
+            setInterval(() => {
+                if (currentDisplayStyle === 2) {
+                    const hr = document.getElementById('smart-pulse-rate');
+                    if (hr) hr.innerText = Math.floor(70 + Math.random() * 8);
+                }
+            }, 2000);
+        });
+
+        // 2. Global Accent Color Theme Selector
+        function changeGlobalTheme(themeName, element) {
+            document.documentElement.className = '';
+            document.documentElement.classList.add('theme-' + themeName);
             
             document.querySelectorAll('.theme-dot').forEach(dot => {
                 dot.classList.remove('active');
@@ -1279,250 +2033,833 @@
             element.classList.add('active');
         }
 
-        // Live Mockup simulator clock / timers
-        let timerInterval = null;
-        let isTimerRunning = false;
-        let currentMode = 'clock'; // clock, timer
-        let secondsLeft = 0;
-        let selectedTotalSeconds = 0;
+        // 3. Display face switcher
+        function switchDisplayFace(styleIndex, element) {
+            currentDisplayStyle = styleIndex;
+            
+            document.querySelectorAll('[id^="face-"]').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
 
-        function updateDisplay(timeString) {
-            document.getElementById('lcd-main-time').innerText = timeString;
+            // Hide all displays
+            document.getElementById('lcd-main-time').style.display = 'none';
+            document.getElementById('lcd-analog-clock').style.display = 'none';
+            document.getElementById('lcd-smart-watch').style.display = 'none';
+            document.getElementById('lcd-pocket-watch').style.display = 'none';
+
+            // Show target display
+            if (styleIndex === 0) {
+                document.getElementById('lcd-main-time').style.display = 'block';
+            } else if (styleIndex === 1) {
+                document.getElementById('lcd-analog-clock').style.display = 'block';
+            } else if (styleIndex === 2) {
+                document.getElementById('lcd-smart-watch').style.display = 'flex';
+                updateSmartWatchRings();
+            } else if (styleIndex === 3) {
+                document.getElementById('lcd-pocket-watch').style.display = 'block';
+            }
+            
+            // Force immediate update
+            updateTimeDisplay();
         }
 
-        function getClockTimeString() {
+        // 4. Timer/Clock logic
+        function initClockTick() {
+            setInterval(() => {
+                if (currentMode === 'clock') {
+                    updateTimeDisplay();
+                }
+            }, 1000);
+            updateTimeDisplay();
+        }
+
+        function getClockStrings() {
             const now = new Date();
-            let hours = now.getHours();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12; // the hour '0' should be '12'
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            return `${String(hours).padStart(2, '0')}:${minutes}:${seconds}`;
+            const h = String(now.getHours() % 12 || 12).padStart(2, '0');
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            return { full: `${h}:${m}:${s}`, hours: now.getHours(), minutes: now.getMinutes(), seconds: now.getSeconds() };
         }
 
-        // Simulate clock ticking by default
-        function tickClock() {
+        function updateTimeDisplay() {
+            const timeObj = getClockStrings();
+            
+            // Render temperature fluctuation
+            const baseTemp = 28.5;
+            const variance = Math.sin(Date.now() / 15000) * 0.4;
+            const finalTemp = (baseTemp + variance + parseFloat(temperatureOffset)).toFixed(1);
+            document.getElementById('lcd-temp-display').innerText = `TEMP: ${finalTemp}°C`;
+
+            // Draw Digital Time
+            let displayString = '';
             if (currentMode === 'clock') {
-                updateDisplay(getClockTimeString());
-                const now = new Date();
-                // Randomize simulated temp slightly
-                const baseTemp = 26.5;
-                const variance = (Math.sin(now.getSeconds() / 10) * 0.2).toFixed(1);
-                document.getElementById('lcd-temp-display').innerText = `TEMP: ${(parseFloat(baseTemp) + parseFloat(variance)).toFixed(1)}°C`;
+                displayString = timeObj.full;
+            } else {
+                const hours = Math.floor(secondsLeft / 3600);
+                const minutes = Math.floor((secondsLeft % 3600) / 60);
+                const seconds = secondsLeft % 60;
+                displayString = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
+
+            document.getElementById('lcd-main-time').innerText = displayString;
+
+            // Draw Analog/Pocket hands
+            let hoursVal = timeObj.hours;
+            let minutesVal = timeObj.minutes;
+            let secondsVal = timeObj.seconds;
+
+            if (currentMode === 'timer') {
+                // Map secondsLeft to fake hands
+                hoursVal = 0;
+                minutesVal = Math.floor(secondsLeft / 60);
+                secondsVal = secondsLeft % 60;
+            }
+
+            const hDeg = (hoursVal % 12) * 30 + minutesVal * 0.5;
+            const mDeg = minutesVal * 6;
+            const sDeg = secondsVal * 6;
+
+            // Rotate elements
+            const hands = [
+                { id: 'analog-hour', deg: hDeg },
+                { id: 'analog-min', deg: mDeg },
+                { id: 'analog-sec', deg: sDeg },
+                { id: 'pocket-hour', deg: hDeg },
+                { id: 'pocket-min', deg: mDeg },
+                { id: 'pocket-sec', deg: sDeg }
+            ];
+
+            hands.forEach(h => {
+                const el = document.getElementById(h.id);
+                if (el) el.style.transform = `rotate(${h.deg}deg)`;
+            });
+
+            // Update Smart Watch details
+            const smTimeSmall = document.getElementById('smart-time-small');
+            if (smTimeSmall) {
+                if (currentMode === 'clock') {
+                    smTimeSmall.innerText = `${String(timeObj.hours % 12 || 12).padStart(2, '0')}:${String(timeObj.minutes).padStart(2, '0')}`;
+                } else {
+                    const m = Math.floor(secondsLeft / 60);
+                    const s = secondsLeft % 60;
+                    smTimeSmall.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+                }
             }
         }
 
-        let clockInterval = setInterval(tickClock, 1000);
-        tickClock(); // Immediate update
-
-        function selectPreset(presetType, lcdTitle, durationSeconds) {
-            // Deactivate all preset buttons
+        function applyPreset(presetType, label, durationSec) {
             document.querySelectorAll('.hw-btn').forEach(btn => {
                 if (!btn.classList.contains('hw-btn-action')) {
                     btn.classList.remove('active-preset');
                 }
             });
-            
-            // Set active class on target button
             event.target.classList.add('active-preset');
-            
-            document.getElementById('lcd-mode-title').innerText = lcdTitle;
-            
+            document.getElementById('lcd-mode-title').innerText = label;
+
             if (presetType === 'clock') {
                 currentMode = 'clock';
-                resetTimer();
-                tickClock();
+                resetTimerState();
             } else {
                 currentMode = 'timer';
                 if (timerInterval) clearInterval(timerInterval);
                 isTimerRunning = false;
-                document.getElementById('sim-start').innerText = "START";
-                document.getElementById('sim-start').classList.add('start-btn');
-                document.getElementById('status-led').classList.remove('active');
                 
-                secondsLeft = durationSeconds;
-                selectedTotalSeconds = durationSeconds;
-                formatAndShowSeconds();
+                const btnToggle = document.getElementById('btn-toggle');
+                btnToggle.innerText = 'START';
+                btnToggle.classList.add('start-btn');
+                document.getElementById('status-led').classList.remove('active');
+
+                secondsLeft = durationSec;
+                selectedTotalSeconds = durationSec;
+                updateTimeDisplay();
+                updateSmartWatchRings();
             }
         }
 
-        function formatAndShowSeconds() {
-            const h = Math.floor(secondsLeft / 3600);
-            const m = Math.floor((secondsLeft % 3600) / 60);
-            const s = secondsLeft % 60;
-            const formatted = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-            updateDisplay(formatted);
-        }
-
-        function toggleTimer() {
+        function toggleTimerState() {
             if (currentMode === 'clock') return;
-            
-            const startBtn = document.getElementById('sim-start');
+
+            const btnToggle = document.getElementById('btn-toggle');
             const statusLed = document.getElementById('status-led');
-            
+
             if (isTimerRunning) {
                 // Pause
                 clearInterval(timerInterval);
                 isTimerRunning = false;
-                startBtn.innerText = "START";
-                startBtn.classList.add('start-btn');
+                btnToggle.innerText = 'START';
+                btnToggle.classList.add('start-btn');
                 statusLed.classList.remove('active');
             } else {
                 // Start
                 if (secondsLeft <= 0) return;
                 isTimerRunning = true;
-                startBtn.innerText = "PAUSE";
-                startBtn.classList.remove('start-btn');
+                btnToggle.innerText = 'PAUSE';
+                btnToggle.classList.remove('start-btn');
                 statusLed.classList.add('active');
-                
+
                 timerInterval = setInterval(() => {
-                    secondsLeft--;
-                    if (secondsLeft <= 0) {
+                    if (secondsLeft > 0) {
+                        secondsLeft--;
+                        updateTimeDisplay();
+                        updateSmartWatchRings();
+                    } else {
                         secondsLeft = 0;
                         clearInterval(timerInterval);
                         isTimerRunning = false;
-                        startBtn.innerText = "START";
-                        startBtn.classList.add('start-btn');
+                        btnToggle.innerText = 'START';
+                        btnToggle.classList.add('start-btn');
                         statusLed.classList.remove('active');
-                        triggerAlarmEffect();
+                        triggerAlarmsFlash();
                     }
-                    formatAndShowSeconds();
                 }, 1000);
             }
         }
 
-        function resetTimer() {
+        function resetTimerState() {
             if (timerInterval) clearInterval(timerInterval);
             isTimerRunning = false;
-            document.getElementById('sim-start').innerText = "START";
-            document.getElementById('sim-start').classList.add('start-btn');
-            document.getElementById('status-led').classList.remove('active');
             
+            const btnToggle = document.getElementById('btn-toggle');
+            btnToggle.innerText = 'START';
+            btnToggle.classList.add('start-btn');
+            document.getElementById('status-led').classList.remove('active');
+
             if (currentMode === 'timer') {
                 secondsLeft = selectedTotalSeconds;
-                formatAndShowSeconds();
-            } else {
-                tickClock();
             }
+            updateTimeDisplay();
+            updateSmartWatchRings();
         }
 
-        function triggerAlarmEffect() {
+        function triggerAlarmsFlash() {
+            // Flash screen
             let flashCount = 0;
-            const mainTime = document.getElementById('lcd-main-time');
-            
-            const flashInterval = setInterval(() => {
-                mainTime.style.visibility = mainTime.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            const lcd = document.querySelector('.lcd-display');
+            const flash = setInterval(() => {
+                lcd.style.opacity = lcd.style.opacity === '0.3' ? '1' : '0.3';
                 flashCount++;
-                if (flashCount >= 10) {
-                    clearInterval(flashInterval);
-                    mainTime.style.visibility = 'visible';
+                if (flashCount >= 8) {
+                    clearInterval(flash);
+                    lcd.style.opacity = '1';
                 }
-            }, 300);
+            }, 250);
+
+            // Play simulated beep sound using Web Audio API
+            playBeepAlarm(600, 0.4);
+            setTimeout(() => playBeepAlarm(600, 0.4), 500);
+            setTimeout(() => playBeepAlarm(600, 0.6), 1000);
         }
 
-        // Focus Guards (App Blocker) simulator logic
-        const blockerBox = document.getElementById('blocker-status-box');
-        
-        function simulateGuard(profile, buttonElement) {
-            // Remove active classes
-            document.querySelectorAll('.guard-btn').forEach(btn => btn.classList.remove('active'));
-            buttonElement.classList.add('active');
-            
-            let htmlContent = '';
-            
-            if (profile === 'gentle') {
-                htmlContent = `
-                    <div style="background: rgba(234, 179, 8, 0.1); border: 2px solid #eab308; padding: 1.5rem; border-radius: 12px; max-width: 400px;">
-                        <span style="color: #eab308; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">⚠️ Gentle Alert Overlay</span>
-                        <h4 style="margin: 8px 0; font-size: 1.1rem; color: #fff;">Are you drifting, Scholar?</h4>
-                        <p style="font-size: 0.8rem; color: #cbd5e1;">"You blacklisted Instagram for this timer block. Stay focused!"</p>
-                        <div style="margin-top: 12px; display: flex; gap: 8px; justify-content: flex-end;">
-                            <button style="background: #eab308; color: #000; border: none; font-weight: 800; padding: 0.35rem 0.8rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">Acknowledge</button>
-                        </div>
-                    </div>
-                `;
-            } else if (profile === 'moderate') {
-                htmlContent = `
-                    <div style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 1rem 1.5rem; text-align: left; width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
-                            <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">System Notification</span>
-                            <span style="font-size: 0.7rem; color: #64748b;">now</span>
-                        </div>
-                        <h5 style="font-weight: 800; margin-bottom: 4px; color: #f1f5f9;">🎯 FocusFlow Guard Intercepted</h5>
-                        <p style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">Active drift detected: social application opened during 50m Intense block.</p>
-                    </div>
-                `;
-            } else if (profile === 'extreme') {
-                htmlContent = `
-                    <div class="status-alert" style="display: flex; background: rgba(239, 68, 68, 0.15); border: 2px solid #ef4444; padding: 2rem; border-radius: 16px; max-width: 400px;">
-                        <span style="font-size: 2.5rem; animation: rotate 1s infinite alternate;">🚨</span>
-                        <h4 style="color: #ef4444; font-size: 1.25rem;">EXTREME INTRUSION ACTION</h4>
-                        <p style="font-size: 0.85rem; color: #fecdd3; line-height: 1.5;">Distracting application has been blocked. Closing in progress. Please return to your active Study Presets panel.</p>
-                        <div style="margin-top: 10px;">
-                            <button onclick="resetSimulatorAlert()" style="background: #ef4444; color: #fff; border: none; font-weight: 800; padding: 0.5rem 1.25rem; font-size: 0.8rem; border-radius: 6px; cursor: pointer; box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);">Close Lock Screen</button>
-                        </div>
-                    </div>
-                `;
+        function playBeepAlarm(freq, duration) {
+            try {
+                initAudioCtx();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = 'square';
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                console.error("Beep trigger failed: ", e);
             }
-            
-            blockerBox.innerHTML = htmlContent;
         }
 
-        function resetSimulatorAlert() {
-            blockerBox.innerHTML = `
-                <div id="guard-default-content">
+        function recalibrateTemperature() {
+            const val = document.getElementById('temp-offset').value;
+            temperatureOffset = val;
+            document.getElementById('temp-offset-lbl').innerText = `${val >= 0 ? '+' : ''}${val}°C offset`;
+            updateTimeDisplay();
+        }
+
+        function updateSmartWatchRings() {
+            const ringXp = document.getElementById('smart-ring-xp');
+            const ringTime = document.getElementById('smart-ring-time');
+            if (!ringXp || !ringTime) return;
+
+            // Map XP percentage
+            const xpPercent = currentXP / 100;
+            const dashoffset1 = 251.2 * (1 - xpPercent);
+            ringXp.style.strokeDashoffset = dashoffset1;
+
+            // Map timer countdown percentage
+            if (currentMode === 'timer' && selectedTotalSeconds > 0) {
+                const timePercent = secondsLeft / selectedTotalSeconds;
+                const dashoffset2 = 201 * (1 - timePercent);
+                ringTime.style.strokeDashoffset = dashoffset2;
+            } else {
+                ringTime.style.strokeDashoffset = 0;
+            }
+        }
+
+        // 5. Audio Synthesizer Logic (Web Audio API)
+        function initAudioCtx() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function toggleSound(soundName, buttonElement) {
+            initAudioCtx();
+            
+            // Clear current active buttons
+            document.querySelectorAll('.sound-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // If clicking the currently active soundscape, turn it off
+            if (soundName === currentSoundscapeName || soundName === 'None') {
+                stopSoundscape();
+                document.getElementById('s-none').classList.add('active');
+                return;
+            }
+
+            stopSoundscape();
+            buttonElement.classList.add('active');
+            currentSoundscapeName = soundName;
+
+            // Generate sound nodes
+            if (soundName === 'White Noise') {
+                const source = createWhiteNoiseNode();
+                const gain = audioCtx.createGain();
+                gain.gain.value = 0.04;
+                source.connect(gain);
+                gain.connect(audioCtx.destination);
+                source.start();
+
+                soundscapeAudioNodes.source = source;
+                soundscapeAudioNodes.gainNode = gain;
+            } 
+            else if (soundName === 'Ocean Waves') {
+                const noise = createWhiteNoiseNode();
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.value = 350;
+
+                const gain = audioCtx.createGain();
+                gain.gain.value = 0.05;
+
+                const lfo = audioCtx.createOscillator();
+                lfo.frequency.value = 0.15; // 6 sec swells
+                const lfoGain = audioCtx.createGain();
+                lfoGain.gain.value = 0.035;
+
+                lfo.connect(lfoGain);
+                lfoGain.connect(gain.gain);
+
+                noise.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                noise.start();
+                lfo.start();
+
+                soundscapeAudioNodes.source = noise;
+                soundscapeAudioNodes.gainNode = gain;
+                soundscapeAudioNodes.extraNodes = [filter, lfo, lfoGain];
+            } 
+            else if (soundName === 'Deep Space') {
+                const osc1 = audioCtx.createOscillator();
+                const osc2 = audioCtx.createOscillator();
+                osc1.frequency.value = 75.0;
+                osc2.frequency.value = 76.5;
+
+                const gain = audioCtx.createGain();
+                gain.gain.value = 0.12;
+
+                const panner1 = audioCtx.createStereoPanner ? audioCtx.createStereoPanner() : null;
+                const panner2 = audioCtx.createStereoPanner ? audioCtx.createStereoPanner() : null;
+
+                if (panner1 && panner2) {
+                    panner1.pan.value = -1;
+                    panner2.pan.value = 1;
+                    osc1.connect(panner1);
+                    panner1.connect(gain);
+                    osc2.connect(panner2);
+                    panner2.connect(gain);
+                } else {
+                    osc1.connect(gain);
+                    osc2.connect(gain);
+                }
+
+                gain.connect(audioCtx.destination);
+                osc1.start();
+                osc2.start();
+
+                soundscapeAudioNodes.source = osc1;
+                soundscapeAudioNodes.gainNode = gain;
+                soundscapeAudioNodes.extraNodes = [osc2, panner1, panner2].filter(Boolean);
+            } 
+            else if (soundName === 'Binaural Beats') {
+                const osc1 = audioCtx.createOscillator();
+                const osc2 = audioCtx.createOscillator();
+                osc1.frequency.value = 120.0;
+                osc2.frequency.value = 130.0; // 10Hz Alpha difference
+
+                const gain = audioCtx.createGain();
+                gain.gain.value = 0.1;
+
+                const panner1 = audioCtx.createStereoPanner ? audioCtx.createStereoPanner() : null;
+                const panner2 = audioCtx.createStereoPanner ? audioCtx.createStereoPanner() : null;
+
+                if (panner1 && panner2) {
+                    panner1.pan.value = -1;
+                    panner2.pan.value = 1;
+                    osc1.connect(panner1);
+                    panner1.connect(gain);
+                    osc2.connect(panner2);
+                    panner2.connect(gain);
+                } else {
+                    osc1.connect(gain);
+                    osc2.connect(gain);
+                }
+
+                gain.connect(audioCtx.destination);
+                osc1.start();
+                osc2.start();
+
+                soundscapeAudioNodes.source = osc1;
+                soundscapeAudioNodes.gainNode = gain;
+                soundscapeAudioNodes.extraNodes = [osc2, panner1, panner2].filter(Boolean);
+            }
+        }
+
+        function createWhiteNoiseNode() {
+            const bufferSize = 2 * audioCtx.sampleRate;
+            const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const output = noiseBuffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) {
+                output[i] = Math.random() * 2 - 1;
+            }
+            const source = audioCtx.createBufferSource();
+            source.buffer = noiseBuffer;
+            source.loop = true;
+            return source;
+        }
+
+        // Stops currently executing soundscape node
+        function stopSoundscape() {
+            try {
+                if (soundscapeAudioNodes.source) {
+                    soundscapeAudioNodes.source.stop();
+                    soundscapeAudioNodes.source = null;
+                }
+                if (soundscapeAudioNodes.extraNodes.length > 0) {
+                    soundscapeAudioNodes.extraNodes.forEach(node => {
+                        if (node.stop) node.stop();
+                    });
+                    soundscapeAudioNodes.extraNodes = [];
+                }
+                currentSoundscapeName = 'None';
+            } catch (e) {
+                console.error("Audio stop err: ", e);
+            }
+        }
+
+        // 6. Focus Guards Simulator Logic
+        function toggleBlocklistApp(appKey, element) {
+            activeBlocklistApps[appKey] = !activeBlocklistApps[appKey];
+            const chk = document.getElementById('chk-' + appKey);
+            if (activeBlocklistApps[appKey]) {
+                element.classList.add('active');
+                chk.innerText = '✓';
+            } else {
+                element.classList.remove('active');
+                chk.innerText = '';
+            }
+        }
+
+        function setGuardLevel(level) {
+            activeGuardLevel = level;
+            document.querySelectorAll('.trigger-btn').forEach(btn => {
+                btn.className = 'trigger-btn';
+            });
+            
+            const targetBtn = document.getElementById('t-' + level);
+            targetBtn.classList.add('active-' + level);
+        }
+
+        function testDistractionAlert() {
+            // Check if any app is blocked
+            const anyBlocked = Object.values(activeBlocklistApps).some(v => v);
+            const preview = document.getElementById('guard-status-window');
+
+            if (!anyBlocked) {
+                preview.innerHTML = `
+                    <div style="color: #ef4444; font-weight: bold; font-size: 0.9rem;">
+                        ⚠️ Alert Failed: No applications selected in focus blacklist! Select YouTube or Instagram first.
+                    </div>
+                `;
+                setTimeout(resetGuardPreview, 2500);
+                return;
+            }
+
+            // Get first blocked app name for display
+            let appName = 'Instagram';
+            if (activeBlocklistApps.yt) appName = 'YouTube';
+            else if (activeBlocklistApps.tt) appName = 'TikTok';
+            else if (activeBlocklistApps.sc) appName = 'Snapchat';
+
+            if (activeGuardLevel === 'gentle') {
+                preview.innerHTML = `
+                    <div class="sim-overlay-gentle">
+                        <span style="color: #eab308; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase;">⚠️ FocusGuard Reminder</span>
+                        <h4 style="margin: 6px 0; font-size: 1rem; color: #fff;">Are you drifting, Scholar?</h4>
+                        <p style="font-size: 0.8rem; color: #94a3b8;">"You blacklisted ${appName} for this timing block. Keep focusing!"</p>
+                        <div style="margin-top: 10px; display: flex; gap: 8px; justify-content: flex-end;">
+                            <button class="sound-btn" style="padding: 2px 6px; font-size: 0.65rem;" onclick="resetGuardPreview()">Acknowledge</button>
+                        </div>
+                    </div>
+                `;
+            } 
+            else if (activeGuardLevel === 'moderate') {
+                preview.innerHTML = `
+                    <div class="sim-overlay-moderate">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+                            <span style="font-size: 0.7rem; color: #64748b; font-weight: 600;">System Notification</span>
+                            <span style="font-size: 0.65rem; color: #475569;">now</span>
+                        </div>
+                        <h5 style="font-weight: 800; margin-bottom: 3px; color: #f1f5f9; font-size: 0.8rem;">🎯 FocusFlow Intercept</h5>
+                        <p style="font-size: 0.7rem; color: #cbd5e1; line-height: 1.4;">Drift app opened: ${appName} blocked during active Pomodoro countdown.</p>
+                    </div>
+                `;
+                setTimeout(resetGuardPreview, 4000);
+            } 
+            else if (activeGuardLevel === 'extreme') {
+                preview.innerHTML = `
+                    <div class="sim-overlay-extreme">
+                        <span class="extreme-alert-icon">🚨</span>
+                        <h4 style="font-size: 1.15rem; font-weight: bold; margin-top: 8px;">LOCKDOWN ACTIVE</h4>
+                        <p style="font-size: 0.75rem; text-align: center; margin-top: 5px; opacity: 0.9;">Access to ${appName} is strictly denied during countdown!</p>
+                        <button class="close-extreme-btn" onclick="dismissExtremeAlert()">Return to Timer</button>
+                    </div>
+                `;
+                // Trigger alarm buzz loop
+                startExtremeBeepLoop();
+            }
+        }
+
+        let extremeBeepInterval = null;
+        function startExtremeBeepLoop() {
+            if (extremeBeepInterval) clearInterval(extremeBeepInterval);
+            extremeBeepInterval = setInterval(() => {
+                playBeepAlarm(880, 0.15);
+            }, 400);
+        }
+
+        function dismissExtremeAlert() {
+            if (extremeBeepInterval) {
+                clearInterval(extremeBeepInterval);
+                extremeBeepInterval = null;
+            }
+            resetGuardPreview();
+        }
+
+        function resetGuardPreview() {
+            document.getElementById('guard-status-window').innerHTML = `
+                <div id="guard-default-screen">
                     <span style="font-size: 3rem;">📱</span>
-                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Blacklisted App Accessed</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 300px; margin-top: 8px;">(Simulated App Blocker Alert trigger below)</p>
+                    <h4 style="margin-top: 15px; font-size: 1.25rem;">Simulator Console</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; max-width: 250px; margin-top: 6px;">Select apps to block, choose a guard level, and trigger a warning popup.</p>
                 </div>
             `;
-            document.querySelectorAll('.guard-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector('.guard-btn').classList.add('active');
         }
 
-        // Gamification Simulated XP Progress
-        let currentXp = 65;
-        let currentLvl = 1;
-        const ranks = [
-            "Beginner Scholar (LVL 1)",
-            "Active Student (LVL 2)",
-            "Time Specialist (LVL 3)",
-            "Focus Master (LVL 4)",
-            "Grandmaster Scholar (LVL 5+)"
+        // 7. RPG Gamification & Sunshine Forest
+        const gridState = Array(16).fill(null).map(() => ({ type: null, stage: 0, interval: null }));
+
+        function initPlantationGrid() {
+            const grid = document.getElementById('plantation-grid');
+            grid.innerHTML = '';
+            for (let i = 0; i < 16; i++) {
+                const tile = document.createElement('div');
+                tile.className = 'grid-tile';
+                tile.dataset.index = i;
+                tile.addEventListener('click', () => clickPlantationTile(i));
+                grid.appendChild(tile);
+            }
+        }
+
+        function selectShopItem(itemType, price, element) {
+            document.querySelectorAll('.shop-card').forEach(card => card.classList.remove('selected'));
+            
+            if (selectedShopSeed === itemType) {
+                selectedShopSeed = null;
+                selectedSeedPrice = 0;
+                document.getElementById('selected-seed-lbl').innerText = 'No Seed Selected';
+                return;
+            }
+
+            selectedShopSeed = itemType;
+            selectedSeedPrice = price;
+            element.classList.add('selected');
+            document.getElementById('selected-seed-lbl').innerText = `Selected: ${itemType.toUpperCase()} (${price}🪙)`;
+        }
+
+        function clickPlantationTile(tileIndex) {
+            const tile = document.querySelector(`.grid-tile[data-index="${tileIndex}"]`);
+            const state = gridState[tileIndex];
+
+            if (!selectedShopSeed) {
+                return;
+            }
+
+            if (selectedShopSeed === 'fertilizer') {
+                if (!state.type || state.stage === 3) {
+                    alert("Nothing to fertilize or tree already mature!");
+                    return;
+                }
+                if (coinsBalance < selectedSeedPrice) {
+                    alert("Not enough coins!");
+                    return;
+                }
+                // Apply fertilizer
+                coinsBalance -= selectedSeedPrice;
+                document.getElementById('lbl-coins').innerText = coinsBalance;
+                
+                if (state.interval) clearInterval(state.interval);
+                state.stage = 3;
+                drawTreeInTile(tile, state.type, 3);
+                playBeepAlarm(800, 0.15);
+                return;
+            }
+
+            // Plant seed
+            if (state.type) {
+                alert("Tile already occupied!");
+                return;
+            }
+
+            if (coinsBalance < selectedSeedPrice) {
+                alert("Not enough Scholar Coins!");
+                return;
+            }
+
+            // Deduct coins
+            coinsBalance -= selectedSeedPrice;
+            document.getElementById('lbl-coins').innerText = coinsBalance;
+
+            state.type = selectedShopSeed;
+            state.stage = 1;
+            drawTreeInTile(tile, selectedShopSeed, 1);
+            playBeepAlarm(440, 0.1);
+
+            // Setup growth intervals
+            state.interval = setInterval(() => {
+                state.stage++;
+                drawTreeInTile(tile, state.type, state.stage);
+                if (state.stage >= 3) {
+                    clearInterval(state.interval);
+                }
+            }, 4000); // Grows stages every 4 seconds
+        }
+
+        function drawTreeInTile(tileElement, treeType, stage) {
+            tileElement.innerHTML = '';
+            if (stage === 1) {
+                tileElement.innerHTML = `<div class="plant-sprout" title="Sprout"></div>`;
+            } else if (stage === 2) {
+                tileElement.innerHTML = `
+                    <div class="plant-sapling" title="Growing Sapling">
+                        <div class="sapling-leaves"></div>
+                        <div class="sapling-stem"></div>
+                    </div>
+                `;
+            } else if (stage === 3) {
+                if (treeType === 'pine') {
+                    tileElement.innerHTML = `
+                        <div class="tree-pine" title="Mature Pine">
+                            <div class="pine-leaves"></div>
+                            <div class="pine-trunk"></div>
+                        </div>
+                    `;
+                } else if (treeType === 'sakura') {
+                    tileElement.innerHTML = `
+                        <div class="tree-sakura" title="Mature Sakura Blossom">
+                            <div class="sakura-blossom"></div>
+                            <div class="sakura-trunk"></div>
+                        </div>
+                    `;
+                } else if (treeType === 'bonsai') {
+                    tileElement.innerHTML = `
+                        <div class="tree-bonsai" title="Mature Bonsai">
+                            <div class="bonsai-crown"></div>
+                            <div class="bonsai-trunk"></div>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        function triggerXPAdd(amount) {
+            currentXP += amount;
+            coinsBalance += amount * 2;
+            document.getElementById('lbl-coins').innerText = coinsBalance;
+
+            if (currentXP >= 100) {
+                currentXP = currentXP % 100;
+                currentLevel++;
+                
+                // Set scholar titles
+                let rank = "Novice Scholar (LVL " + currentLevel + ")";
+                if (currentLevel >= 2) rank = "Active Student (LVL " + currentLevel + ")";
+                if (currentLevel >= 4) rank = "Time Specialist (LVL " + currentLevel + ")";
+                if (currentLevel >= 8) rank = "Focus Master (LVL " + currentLevel + ")";
+
+                document.getElementById('lbl-rank').innerText = rank;
+                document.getElementById('lcd-xp-tracker').innerText = `LVL ${currentLevel}: ` + rank.split(' ')[0].toUpperCase();
+                
+                // Play level up jingle
+                playBeepAlarm(523, 0.15); // C5
+                setTimeout(() => playBeepAlarm(659, 0.15), 150); // E5
+                setTimeout(() => playBeepAlarm(784, 0.35), 300); // G5
+            }
+
+            document.getElementById('lbl-xp').innerText = currentXP;
+            document.getElementById('xp-fill').style.width = currentXP + '%';
+            
+            updateSmartWatchRings();
+        }
+
+        // 8. AI Tutor Typewriter Logic
+        const presetAnswers = {
+            photosynthesis: `📚 **Photosynthesis Overview**\n\nPhotosynthesis is the cellular chemical process by which green plants and some other organisms use sunlight to synthesize nutrients from carbon dioxide and water.\n\n### 🔬 Key Reaction Formula:\n\`\`\`\n6CO₂ + 6H₂O + Light Energy ➔ C₆H₁₂O₆ + 6O₂\n\`\`\`\n\n### ⚡ Process Stages:\n1. **Light-dependent Reactions:** Occurs inside thylakoid membranes where solar photons split water, releasing oxygen and charging ATP/NADPH energy molecules.\n2. **Calvin Cycle (Light-independent):** Takes place in the stroma to compress carbon dioxide into sugar molecules.`,
+            
+            calculus: `📐 **15-Minute Calculus Core Study Guide**\n\nGet ready for exam concepts in this short checklist:\n\n* **Limits (0 - 3 Mins):** Understand continuity. If \`f(x)\` approaches a value \`L\` as \`x ➔ c\`, the limit exists.\n* **Derivatives (3 - 8 Mins):** Represents the instantaneous rate of change (slope of tangent line). Key power rule:\n  \`\`\`\n  d/dx [x^n] = n * x^(n-1)\n  \`\`\`\n* **Integrals (8 - 13 Mins):** Calculate area under curve. Fundamental theorem linking derivatives/integrals:\n  \`\`\`\n  ∫ f(x) dx = F(b) - F(a)\n  \`\`\`\n* **Review (13 - 15 Mins):** Solve one sample quotient derivative equation.`
+        };
+
+        function queryAITutor() {
+            const promptInput = document.getElementById('ai-user-prompt').value.trim();
+            const provider = document.getElementById('ai-model-provider').value;
+            const consoleBox = document.getElementById('ai-console-out');
+
+            if (!promptInput) {
+                alert("Please type a question or study topic first!");
+                return;
+            }
+
+            // Show scanner bar simulation
+            consoleBox.innerHTML = `
+                <div class="ai-resp-scan">
+                    <div class="scanner-bar"></div>
+                    <span style="margin-top: 15px; font-weight: bold; color: var(--glow-color);">SYNCHRONIZING TELEMETRY FLOW [${provider.toUpperCase()}]...</span>
+                </div>
+            `;
+
+            let responseText = `🤖 **Simulated Study Tutoring Note**\n\nYour prompt: "${promptInput}" has been processed.\n\n* FocusFlow DXT runs offline to avoid distraction package pings.\n* Ensure overlay window guard permissions are fully granted so we can lock out apps when you exit this lecture screen!`;
+            
+            // Match keywords
+            const lower = promptInput.toLowerCase();
+            if (lower.includes('photo')) {
+                responseText = presetAnswers.photosynthesis;
+            } else if (lower.includes('calc') || lower.includes('math') || lower.includes('study')) {
+                responseText = presetAnswers.calculus;
+            }
+
+            setTimeout(() => {
+                consoleBox.innerHTML = '';
+                typewriterEffect(consoleBox, responseText, 0);
+            }, 1800);
+        }
+
+        function typewriterEffect(container, text, charIndex) {
+            if (charIndex < text.length) {
+                let char = text.charAt(charIndex);
+                if (char === '\n') {
+                    container.innerHTML += '<br>';
+                } else {
+                    container.innerHTML += char;
+                }
+                charIndex++;
+                setTimeout(() => typewriterEffect(container, text, charIndex), 8);
+            }
+        }
+
+        // 9. Documentation Tab Switching
+        const docTabContents = [
+            `<h3>📘 FocusFlow Operational Guide</h3>
+            <p style="margin-top:10px; color:var(--text-secondary);">Follow these steps to configure app-blocking locks and countdown cycles:</p>
+            <ul class="doc-list">
+                <li><strong>Step 1: Install & Boot:</strong> Open the app and toggle system permission settings on the first card layout.</li>
+                <li><strong>Step 2: Allow Overlay Drawing:</strong> Grant "Display over other apps" permissions. This enables the extreme lock window to overlay on top of distraction reels.</li>
+                <li><strong>Step 3: Setup Blacklist:</strong> Go to the general settings tab ➔ Click "Installed User Apps Selector" ➔ Check mark the packages you want to lock (e.g. youtube, instagram, tiktok).</li>
+                <li><strong>Step 4: Lock Modes:</strong> Gentle mode fires a warning toast; Moderate mode sets system reminders; Extreme mode plays buzzer alarms and overlays lockdowns.</li>
+            </ul>`,
+
+            `<h3>⚙️ Service-Driven State Machine</h3>
+            <p style="margin-top:10px; color:var(--text-secondary);">Unlike simple web apps, FocusFlow DXT binds core Kotlin engines to foreground services:</p>
+            <ul class="doc-list">
+                <li><strong>Foreground Service Binder:</strong> The countdown uses <code>TimerService.kt</code> to enforce alarms even when the app process is swiped away.</li>
+                <li><strong>Accessibility Service Interceptor:</strong> Utilizes <code>FocusOverlayAccessibilityService.kt</code> to listen to <code>typeWindowStateChanged</code> events. When a user switches to a blocked package name, the overlay launches.</li>
+                <li><strong>Dual Diagnostics Loop:</strong> A background coroutine handles thread intervals to poll usage stats manager profiles as a fallback layer.</li>
+            </ul>
+            <div class="doc-code-block">
+// Fragment of service app interception loop in TimerService.kt:
+override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+    if (intent?.action == ACTION_START_MONITORING) {
+        startForeground(NOTIFICATION_ID, createFocusNotification())
+        startInterceptionCoroutine()
+    }
+    return START_STICKY
+}
+            </div>`,
+
+            `<h3>🔋 Battery optimization Whitelisting Guide</h3>
+            <p style="margin-top:10px; color:var(--text-secondary);">Android operating systems apply aggressive background limits. Follow these whitelisting steps:</p>
+            <ul class="doc-list">
+                <li><strong>Xiaomi/MIUI:</strong> Settings ➔ Apps ➔ Manage Apps ➔ FocusFlow ➔ Set Battery Saver to "No Restrictions".</li>
+                <li><strong>OnePlus/OxygenOS:</strong> Settings ➔ Battery ➔ App Battery Management ➔ FocusFlow ➔ Enable "Allow background activity".</li>
+                <li><strong>Samsung/OneUI:</strong> Settings ➔ Apps ➔ FocusFlow ➔ Battery ➔ Select "Unrestricted".</li>
+                <li><strong>Auto-Start Toggles:</strong> Enable "Auto-Start" toggles inside permissions so the accessibility service remains active after phone reboots.</li>
+            </ul>`,
+
+            `<h3>🔒 Privacy & 100% Free Open-Source License</h3>
+            <p style="margin-top:10px; color:var(--text-secondary);">FocusFlow DXT is built under the MIT license, prioritizing academic transparency:</p>
+            <ul class="doc-list">
+                <li><strong>Serverless Privacy:</strong> Zero database connections or tracker SDKs. Your app whitelist is stored locally in encrypted SharedPreferences.</li>
+                <li><strong>Zero Ads & Paywalls:</strong> Completely free for students. Scholar Coins and fertilizer increments are earned strictly through study minutes.</li>
+                <li><strong>JSON Local Portals:</strong> Back up your progress easily:</li>
+            </ul>
+            <div class="backup-flex">
+                <span style="font-size:0.75rem; font-weight:bold; color:var(--glow-color);">Mock Backup Config Payload:</span>
+                <textarea id="mock-json-val" class="ai-textbox" style="font-size:0.75rem; height:80px;" readonly>
+{
+  "app": "FocusFlow-DXT",
+  "version": "1.0.0",
+  "level": 1,
+  "xp": 65,
+  "coins": 150,
+  "streaks": 1,
+  "blacklisted_packages": ["com.google.android.youtube", "com.instagram.android"]
+}
+                </textarea>
+                <div class="backup-btn-group">
+                    <button class="sound-btn" onclick="copyMockBackup()">Copy JSON Payload</button>
+                    <button class="sound-btn" onclick="alert('Backup restored successfully (Simulated)!')">Restore Backup Payload</button>
+                </div>
+            </div>`
         ];
 
-        function addSimulatedXp(amount) {
-            currentXp += amount;
-            if (currentXp >= 100) {
-                currentXp = currentXp % 100;
-                currentLvl++;
-            }
+        function switchDocTab(tabIndex) {
+            document.querySelectorAll('.doc-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('tab-' + tabIndex).classList.add('active');
             
-            // Render updates
-            document.getElementById('showcase-xp').innerText = currentXp;
-            
-            let rankText = ranks[Math.min(currentLvl - 1, ranks.length - 1)];
-            if (currentLvl > 5) {
-                rankText = `Grandmaster Scholar (LVL ${currentLvl})`;
-            }
-            document.getElementById('showcase-rank').innerText = rankText;
-            
-            // Bar fill width
-            document.getElementById('showcase-xp-fill').style.width = `${currentXp}%`;
-            
-            // Update LCD header info if lvl matches mock status
-            document.getElementById('lcd-xp-tracker').innerText = `LVL ${currentLvl}: ${rankText.split(' (')[0].toUpperCase()}`;
+            document.getElementById('doc-tab-content').innerHTML = docTabContents[tabIndex];
         }
 
-        function resetSimulatedXp() {
-            currentXp = 0;
-            currentLvl = 1;
-            document.getElementById('showcase-xp').innerText = '0';
-            document.getElementById('showcase-rank').innerText = ranks[0];
-            document.getElementById('showcase-xp-fill').style.width = '0%';
-            document.getElementById('lcd-xp-tracker').innerText = `LVL 1: BEGINNER SCHOLAR`;
+        function copyMockBackup() {
+            const copyText = document.getElementById("mock-json-val");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(copyText.value);
+            alert("📋 Backup configuration copied to system clipboard!");
         }
+
     </script>
 </body>
 </html>
